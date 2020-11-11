@@ -157,6 +157,68 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/11/11/codewars-1-Convert-string-to-camel-case/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ethanlyk">
+      <meta itemprop="description" content="A place to keep progressing">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EthanLyk's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/11/codewars-1-Convert-string-to-camel-case/" class="post-title-link" itemprop="url">codewars-1: Convert string to camel case</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2020-11-11 22:34:00 / 修改時間：22:36:18" itemprop="dateCreated datePublished" datetime="2020-11-11T22:34:00+08:00">2020-11-11</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Q: Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case).<br>Examples</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">toCamelCase(&quot;the-stealth-warrior&quot;); &#x2F;&#x2F; returns &quot;theStealthWarrior&quot;</span><br><span class="line"></span><br><span class="line">toCamelCase(&quot;The_Stealth_Warrior&quot;); &#x2F;&#x2F; returns &quot;TheStealthWarrior&quot;</span><br></pre></td></tr></table></figure>
+
+<p>A:</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// kotlin</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">toCamelCase</span><span class="params">(str:<span class="type">String</span>)</span></span>:String &#123;</span><br><span class="line">    <span class="keyword">var</span> sb = StringBuffer()</span><br><span class="line">    <span class="keyword">var</span> nextCap = <span class="literal">false</span></span><br><span class="line">    <span class="keyword">for</span> ((i, v) <span class="keyword">in</span> str.withIndex()) &#123;</span><br><span class="line">        <span class="keyword">if</span> (v == <span class="string">&#x27;-&#x27;</span> || v == <span class="string">&#x27;_&#x27;</span>) &#123;</span><br><span class="line">            nextCap = <span class="literal">true</span></span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        &#125; </span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (nextCap) &#123;</span><br><span class="line">            sb.append(v.toUpperCase())</span><br><span class="line">            nextCap = <span class="literal">false</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            sb.append(v)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> sb.toString()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/11/10/leetcode-4-Move-Zeroes/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -894,95 +956,11 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/10/03/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ethanlyk">
-      <meta itemprop="description" content="A place to keep progressing">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="EthanLyk's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/10/03/hello-world/" class="post-title-link" itemprop="url">My Hexo</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2020-10-03 09:52:20" itemprop="dateCreated datePublished" datetime="2020-10-03T09:52:20+08:00">2020-10-03</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2020-10-11 20:48:28" itemprop="dateModified" datetime="2020-10-11T20:48:28+08:00">2020-10-11</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h5 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h5><blockquote>
-<p>Hexo 是基於 Node.js 開發的套件</p>
-</blockquote>
-<h5 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h5><ol>
-<li>安裝 npm</li>
-<li>安裝 git</li>
-<li>安裝 hexo</li>
-<li>設定 hexo</li>
-<li>佈署至 github</li>
-</ol>
-<h5 id="Ubuntu-環境安裝-hexo"><a href="#Ubuntu-環境安裝-hexo" class="headerlink" title="Ubuntu 環境安裝 hexo"></a>Ubuntu 環境安裝 hexo</h5><ol>
-<li><p>安裝 npm: <code>sudo apt-get install npm</code></p>
-</li>
-<li><p>安裝 git: <code>sudo apt-get install git</code></p>
-</li>
-<li><p>安裝 hexo: <code>npm install -g hexo-cli</code></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/10/03/hello-world/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一頁"></i></a>
+  </nav>
 
 
 
@@ -1047,14 +1025,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
