@@ -157,6 +157,70 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/11/15/codewars-3-Which-are-in/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ethanlyk">
+      <meta itemprop="description" content="A place to keep progressing">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EthanLyk's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/15/codewars-3-Which-are-in/" class="post-title-link" itemprop="url">codewars-3: Which are in?</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2020-11-15 11:20:00 / 修改時間：11:22:36" itemprop="dateCreated datePublished" datetime="2020-11-15T11:20:00+08:00">2020-11-15</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Q:<br>Given two arrays of strings a1 and a2 return a sorted array r in lexicographical order of the strings of a1 which are substrings of strings of a2.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#Example 1: </span><br><span class="line">a1 &#x3D; [&quot;arp&quot;, &quot;live&quot;, &quot;strong&quot;]</span><br><span class="line">a2 &#x3D; [&quot;lively&quot;, &quot;alive&quot;, &quot;harp&quot;, &quot;sharp&quot;, &quot;armstrong&quot;]</span><br><span class="line">returns [&quot;arp&quot;, &quot;live&quot;, &quot;strong&quot;]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#Example 2: </span><br><span class="line">a1 &#x3D; [&quot;tarp&quot;, &quot;mice&quot;, &quot;bull&quot;]</span><br><span class="line">a2 &#x3D; [&quot;lively&quot;, &quot;alive&quot;, &quot;harp&quot;, &quot;sharp&quot;, &quot;armstrong&quot;]</span><br><span class="line">returns []</span><br></pre></td></tr></table></figure>
+
+<p>A:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> (</span><br><span class="line">    <span class="string">&quot;sort&quot;</span></span><br><span class="line">    <span class="string">&quot;strings&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">InArray</span><span class="params">(array1 []<span class="keyword">string</span>, array2 []<span class="keyword">string</span>)</span> []<span class="title">string</span></span> &#123;</span><br><span class="line">    <span class="comment">// your code</span></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(array1) == <span class="number">0</span> || <span class="built_in">len</span>(array2) == <span class="number">0</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> []<span class="keyword">string</span>&#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">      </span><br><span class="line">    aySorted := <span class="built_in">make</span>([]<span class="keyword">string</span>, <span class="built_in">len</span>(array1))</span><br><span class="line">    <span class="built_in">copy</span>(aySorted, array1)</span><br><span class="line">    sort.Strings(aySorted)</span><br><span class="line">    </span><br><span class="line">    r := []<span class="keyword">string</span> &#123;&#125;</span><br><span class="line">    checkDup := <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">bool</span>)</span><br><span class="line">    <span class="keyword">for</span> _, candidate := <span class="keyword">range</span> aySorted &#123;</span><br><span class="line">        _, ok := checkDup[candidate]</span><br><span class="line">        <span class="keyword">if</span> ok &#123;</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            checkDup[candidate] = <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> _, s := <span class="keyword">range</span> array2 &#123;</span><br><span class="line">            <span class="keyword">if</span> strings.Contains(s, candidate) &#123;</span><br><span class="line">                r = <span class="built_in">append</span>(r, candidate)</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> r  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/11/14/leetcode-5-Best-Time-to-Buy-and-Sell-Stock-II/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -830,131 +894,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/10/18/GCM-1-VM/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ethanlyk">
-      <meta itemprop="description" content="A place to keep progressing">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="EthanLyk's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/10/18/GCM-1-VM/" class="post-title-link" itemprop="url">GCP-1: VM</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2020-10-18 09:29:00" itemprop="dateCreated datePublished" datetime="2020-10-18T09:29:00+08:00">2020-10-18</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2020-11-08 11:56:10" itemprop="dateModified" datetime="2020-11-08T11:56:10+08:00">2020-11-08</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h6 id="VM"><a href="#VM" class="headerlink" title="VM"></a>VM</h6><ul>
-<li>Google Cloud Platform &gt; Compute Engine &gt; VM 執行個體<ul>
-<li>建立執行個體<ul>
-<li>名稱：myinstance</li>
-<li>區域：us-west1 (Oregon)</li>
-<li>機器設定<ul>
-<li>系列：N1</li>
-<li>機器類型：f1-micro (free tier)</li>
-</ul>
-</li>
-<li>開機磁碟<ul>
-<li>變更：Ubuntu, Ubuntu 18.04 LTS, 大小 20GB</li>
-</ul>
-</li>
-<li>管理、安全性、磁碟、網路、單獨租用<ul>
-<li>安全性<ul>
-<li>設定 ubuntu ssh 可連接 VM<ul>
-<li>在本機：<code>cat ~/.ssh/id_rsa.pub</code></li>
-<li>將 id_rsa.pub 內容： <code>ssh-rsa... yourname@machine</code> 複製到 <code>SSH 金鑰</code> 的方塊區</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>網路<ul>
-<li>設定外部可存取 port<ul>
-<li>網路標記：fw-myport</li>
-<li>網路界面 &gt; edit &gt; 外部 IP：臨時 / 建立 IP 位址</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>建立</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>從 ubuntu 本機 ssh VM<ul>
-<li>ssh “VM 外部 IP”</li>
-</ul>
-</li>
-</ul>
-<h6 id="VPC-網路"><a href="#VPC-網路" class="headerlink" title="VPC 網路"></a>VPC 網路</h6><ul>
-<li>設定外部可存取 port<ul>
-<li>點選欲設定 VM 最右邊 “…” &gt; 查看網路詳細資料</li>
-<li>VPC 網路 &gt; 防火牆 &gt; 建立防火牆<ul>
-<li>名稱：myfw</li>
-<li>流量方向：輸入</li>
-<li>目標標記：fw-myport (與建立 VM 時的網路標記一樣)</li>
-<li>來源 IP 範圍: 0.0.0.0/0</li>
-<li>指定的通訊協定和通訊阜<ul>
-<li>tcp: 10000-10100</li>
-</ul>
-</li>
-<li>建立</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1024,7 +963,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
