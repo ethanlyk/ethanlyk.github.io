@@ -157,6 +157,69 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/11/16/codewars-4-Highest-and-Lowest/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ethanlyk">
+      <meta itemprop="description" content="A place to keep progressing">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EthanLyk's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/16/codewars-4-Highest-and-Lowest/" class="post-title-link" itemprop="url">codewars-4: Highest and Lowest</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2020-11-16 21:36:00 / 修改時間：21:37:19" itemprop="dateCreated datePublished" datetime="2020-11-16T21:36:00+08:00">2020-11-16</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Q:<br>In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.</p>
+<p>Example:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">high_and_low(&quot;1 2 3 4 5&quot;)  # return &quot;5 1&quot;</span><br><span class="line">high_and_low(&quot;1 2 -3 4 5&quot;) # return &quot;5 -3&quot;</span><br><span class="line">high_and_low(&quot;1 9 3 4 -5&quot;) # return &quot;9 -5&quot;</span><br></pre></td></tr></table></figure>
+
+<p>A:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># python</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">high_and_low</span>(<span class="params">numbers</span>):</span></span><br><span class="line">    ay = numbers.strip().split(<span class="string">&quot; &quot;</span>);</span><br><span class="line">    sortedArray = sorted(ay, key=<span class="keyword">lambda</span> x: int(x))</span><br><span class="line">    <span class="keyword">return</span> sortedArray[len(sortedArray)<span class="number">-1</span>] + <span class="string">&quot; &quot;</span> + sortedArray[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Ref:</span></span><br><span class="line"><span class="comment">#def high_and_low(numbers):</span></span><br><span class="line"><span class="comment">#    nn = [int(s) for s in numbers.split(&quot; &quot;)]</span></span><br><span class="line"><span class="comment">#    return &quot;%i %i&quot; % (max(nn),min(nn))</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/11/15/codewars-3-Which-are-in/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -833,67 +896,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/10/22/multi-thread-1-wait-notify/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ethanlyk">
-      <meta itemprop="description" content="A place to keep progressing">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="EthanLyk's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/10/22/multi-thread-1-wait-notify/" class="post-title-link" itemprop="url">multi-thread-1: wait/notify</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-              
-
-              <time title="創建時間：2020-10-22 21:57:00 / 修改時間：22:03:26" itemprop="dateCreated datePublished" datetime="2020-10-22T21:57:00+08:00">2020-10-22</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h6 id="使用時機"><a href="#使用時機" class="headerlink" title="使用時機"></a>使用時機</h6><ul>
-<li>無法在 main thread 或要背景執行，但需要等待執行結果</li>
-</ul>
-<h6 id="Sample-code"><a href="#Sample-code" class="headerlink" title="Sample code"></a>Sample code</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">IsUrlAlive</span><span class="params">(String myUrl)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">final</span> Object lock = <span class="keyword">new</span> Object();</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">final</span> URL url = <span class="keyword">new</span> URL(myUrl);</span><br><span class="line">        <span class="keyword">final</span> <span class="keyword">boolean</span>[] bAlive = <span class="keyword">new</span> <span class="keyword">boolean</span>[<span class="number">1</span>];</span><br><span class="line">        Thread th = <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    HttpURLConnection hc = (HttpURLConnection) url.openConnection();</span><br><span class="line">                    bAlive[<span class="number">0</span>] = (hc.getResponseCode() == <span class="number">200</span>);</span><br><span class="line"></span><br><span class="line">                    <span class="keyword">synchronized</span> (lock) &#123;</span><br><span class="line">                        lock.notify();</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        th.start();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">synchronized</span> (lock) &#123;</span><br><span class="line">            lock.wait();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> bAlive[<span class="number">0</span>];</span><br><span class="line">    &#125; <span class="keyword">catch</span> (IOException | InterruptedException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -963,7 +965,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
