@@ -157,6 +157,80 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/11/23/codewars-13-Iterative-Rotation-Cipher-5-kyu/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ethanlyk">
+      <meta itemprop="description" content="A place to keep progressing">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EthanLyk's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/23/codewars-13-Iterative-Rotation-Cipher-5-kyu/" class="post-title-link" itemprop="url">codewars-13: Iterative Rotation Cipher (5 kyu)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2020-11-23 22:32:00 / 修改時間：22:35:47" itemprop="dateCreated datePublished" datetime="2020-11-23T22:32:00+08:00">2020-11-23</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Q:<br>In this kata, your task is to implement what I call Iterative Rotation Cipher (IRC). To complete the task, you will create an object with two methods, encode and decode. (For non-JavaScript versions, you only need to write the two functions without the enclosing dict)<br>Input</p>
+<p>The encode method will receive two arguments — a positive integer n and a string value.</p>
+<p>The decode method will receive one argument — a string value.<br>Output</p>
+<p>Each method will return a string value.</p>
+<h6 id="How-It-Works"><a href="#How-It-Works" class="headerlink" title="How It Works"></a>How It Works</h6><p>Encoding and decoding are done by performing a series of character and substring rotations on a string input.</p>
+<p>Encoding: The number of rotations is determined by the value of n. The sequence of rotations is applied in the following order:<br> Step 1: remove all spaces in the string (but remember their positions)<br> Step 2: shift the order of characters in the new string to the right by n characters<br> Step 3: put the spaces back in their original positions<br> Step 4: shift the characters of each substring (separated by one or more consecutive spaces) to the right by n</p>
+<p>Repeat this process until it has been completed n times in total.<br>The value n is then prepended to the resulting string with a space.</p>
+<p>Decoding: Decoding simply reverses the encoding process.</p>
+<h6 id="Test-Example"><a href="#Test-Example" class="headerlink" title="Test Example"></a>Test Example</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">val phrase &#x3D; &quot;If you wish to make an apple pie from scratch, you must first invent the universe.&quot;</span><br><span class="line">val solution &#x3D; &quot;10 hu fmo a,ys vi utie mr snehn rni tvte .ysushou teI fwea pmapi apfrok rei tnocsclet&quot;</span><br><span class="line">IterativeRotationCipher.encode(10,phrase) &#x3D;&#x3D; solution &#x2F;&#x2F; true</span><br><span class="line"></span><br><span class="line">&#x2F;* Step-by-step breakdown:</span><br><span class="line">Step 1 — remove all spaces:</span><br><span class="line">&quot;Ifyouwishtomakeanapplepiefromscratch,youmustfirstinventtheuniverse.&quot;</span><br><span class="line"></span><br><span class="line">Step 2 — shift the order of string characters to the right by 10:</span><br><span class="line">&quot;euniverse.Ifyouwishtomakeanapplepiefromscratch,youmustfirstinventth&quot;</span><br><span class="line"></span><br><span class="line">Step 3 — place the spaces back in their original positions:</span><br><span class="line">&quot;eu niv erse .I fyou wi shtom ake anap plepiefr oms crat ch,yo umustf irs tinventth&quot;</span><br><span class="line"></span><br><span class="line">Step 4 — shift the order of characters for each space-separated substring to the right by 10:</span><br><span class="line">&quot;eu vni seer .I oufy wi shtom eak apan frplepie som atcr ch,yo ustfum sir htinventt&quot;</span><br><span class="line"></span><br><span class="line">Repeat the steps 9 more times before returning the string with &quot;10 &quot; prepended. *&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p>Technical Details</p>
+<ul>
+<li>Input will always be valid.</li>
+<li>The characters used in the strings include any combination of alphanumeric characters, the space character, the newline character, and any of the following: _!@#$%^&amp;()[]{}+-*/=”‘&lt;&gt;,.?:;.</li>
+</ul>
+<p>A:</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// kotlin</span></span><br><span class="line"><span class="keyword">object</span> IterativeRotationCipher &#123;</span><br><span class="line">    <span class="keyword">val</span> escapeMap: Map&lt;<span class="built_in">Char</span>, <span class="built_in">Char</span>&gt; = mapOf(<span class="string">&#x27;\n&#x27;</span> to <span class="string">&#x27;~&#x27;</span>, <span class="string">&#x27;\t&#x27;</span> to <span class="string">&#x27;`&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">encode</span><span class="params">(n:<span class="type">Int</span>, s:<span class="type">String</span>)</span></span>: String &#123;</span><br><span class="line">        <span class="keyword">var</span> candidate = <span class="string">&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (i <span class="keyword">in</span> s.indices) &#123;</span><br><span class="line">            <span class="keyword">when</span> (s[i].toChar()) &#123;</span><br><span class="line">                <span class="string">&#x27;\n&#x27;</span> -&gt; candidate += escapeMap[<span class="string">&#x27;\n&#x27;</span>]</span><br><span class="line">                <span class="string">&#x27;\t&#x27;</span> -&gt; candidate += escapeMap[<span class="string">&#x27;\t&#x27;</span>]</span><br><span class="line">                <span class="keyword">else</span> -&gt; candidate += s[i]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> str = candidate</span><br><span class="line">        <span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">1</span>..n) &#123;</span><br><span class="line">            str = doEncode(n, str)</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> ret = <span class="string">&quot;&quot;</span></span><br><span class="line">        <span class="keyword">for</span> (i <span class="keyword">in</span> str.indices) &#123;</span><br><span class="line">            <span class="keyword">when</span> (str[i].toChar()) &#123;</span><br><span class="line">                escapeMap[<span class="string">&#x27;\n&#x27;</span>] -&gt; ret += <span class="string">&quot;\n&quot;</span></span><br><span class="line">                escapeMap[<span class="string">&#x27;\t&#x27;</span>] -&gt; ret += <span class="string">&quot;\t&quot;</span></span><br><span class="line">                <span class="keyword">else</span> -&gt; ret += str[i]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;    </span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;<span class="variable">$n</span> <span class="variable">$ret</span>&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">doEncode</span><span class="params">(n:<span class="type">Int</span>, s:<span class="type">String</span>)</span></span>: String &#123;</span><br><span class="line">        <span class="keyword">var</span> spaceList: MutableList&lt;<span class="built_in">Int</span>&gt; = mutableListOf()</span><br><span class="line">        <span class="keyword">var</span> candidate = <span class="string">&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (i <span class="keyword">in</span> s.indices) &#123;</span><br><span class="line">            <span class="keyword">if</span> (s[i] == <span class="string">&#x27; &#x27;</span>) &#123;</span><br><span class="line">                spaceList.add(i)</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                candidate += s[i]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        candidate = candidate.substring(candidate.length-n) + candidate.substring(<span class="number">0</span>, candidate.length-n)</span><br><span class="line">        <span class="keyword">var</span> sb = StringBuffer(candidate)</span><br><span class="line">        spaceList.forEach &#123;</span><br><span class="line">            sb.insert(it, <span class="string">&#x27; &#x27;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">var</span> ay = sb.toString().split(<span class="string">&quot; &quot;</span>)</span><br><span class="line">        <span class="keyword">val</span> ayShifted: MutableList&lt;String&gt; = mutableListOf()</span><br><span class="line">        ay.forEach &#123;</span><br><span class="line">            <span class="keyword">var</span> str = it</span><br><span class="line">            <span class="keyword">if</span> (str.trim().length != <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">1</span>..n) &#123;</span><br><span class="line">                    str = str.substring(str.length-<span class="number">1</span>) + str.substring(<span class="number">0</span>, str.length-<span class="number">1</span>)</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            ayShifted.add(str)</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ayShifted.joinToString(<span class="string">&quot; &quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">decode</span><span class="params">(s:<span class="type">String</span>)</span></span>: String &#123;</span><br><span class="line">        <span class="keyword">var</span> candidate = <span class="string">&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (i <span class="keyword">in</span> s.indices) &#123;</span><br><span class="line">            <span class="keyword">when</span> (s[i].toChar()) &#123;</span><br><span class="line">                <span class="string">&#x27;\n&#x27;</span> -&gt; candidate += escapeMap[<span class="string">&#x27;\n&#x27;</span>]</span><br><span class="line">                <span class="string">&#x27;\t&#x27;</span> -&gt; candidate += escapeMap[<span class="string">&#x27;\t&#x27;</span>]</span><br><span class="line">                <span class="keyword">else</span> -&gt; candidate += s[i]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">val</span> idx = candidate.indexOf(<span class="string">&quot; &quot;</span>)</span><br><span class="line">        <span class="keyword">val</span> n = candidate.substring(<span class="number">0</span>, idx)</span><br><span class="line">        <span class="keyword">var</span> str = candidate.substring(idx+<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">1</span>..n.toInt()) &#123;</span><br><span class="line">            str = doDecode(n.toInt(), str)</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> ret = <span class="string">&quot;&quot;</span></span><br><span class="line">        <span class="keyword">for</span> (i <span class="keyword">in</span> str.indices) &#123;</span><br><span class="line">            <span class="keyword">when</span> (str[i].toChar()) &#123;</span><br><span class="line">                escapeMap[<span class="string">&#x27;\n&#x27;</span>] -&gt; ret += <span class="string">&quot;\n&quot;</span></span><br><span class="line">                escapeMap[<span class="string">&#x27;\t&#x27;</span>] -&gt; ret += <span class="string">&quot;\t&quot;</span></span><br><span class="line">                <span class="keyword">else</span> -&gt; ret += str[i]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;  </span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ret</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">doDecode</span><span class="params">(n: <span class="type">Int</span>, s: <span class="type">String</span>)</span></span>: String &#123;</span><br><span class="line">        <span class="keyword">var</span> spaceList: MutableList&lt;<span class="built_in">Int</span>&gt; = mutableListOf()</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (i <span class="keyword">in</span> s.indices) &#123;</span><br><span class="line">            <span class="keyword">if</span> (s[i] == <span class="string">&#x27; &#x27;</span>) &#123;</span><br><span class="line">                spaceList.add(i)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> ay = s.split(<span class="string">&quot; &quot;</span>)</span><br><span class="line">        <span class="keyword">val</span> ayShifted: MutableList&lt;String&gt; = mutableListOf()</span><br><span class="line">        ay.forEach &#123;</span><br><span class="line">            <span class="keyword">var</span> str = it</span><br><span class="line">            <span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">1</span>..n) &#123;</span><br><span class="line">                <span class="keyword">if</span> (str.trim().length != <span class="number">0</span>) &#123;</span><br><span class="line">                    str = str.substring(<span class="number">1</span>) + str.substring(<span class="number">0</span>, <span class="number">1</span>)</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            ayShifted.add(str)</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> candidate = ayShifted.joinToString(<span class="string">&quot;&quot;</span>);</span><br><span class="line">        candidate = candidate.substring(n) + candidate.substring(<span class="number">0</span>, n)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> sb = StringBuffer(candidate)</span><br><span class="line">        spaceList.forEach &#123;</span><br><span class="line">            sb.insert(it, <span class="string">&#x27; &#x27;</span>)</span><br><span class="line">        &#125;    </span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> sb.toString()</span><br><span class="line">    &#125;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/11/21/codewars-12-Permutations-4-kyu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -722,70 +796,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/11/15/codewars-3-Which-are-in/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ethanlyk">
-      <meta itemprop="description" content="A place to keep progressing">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="EthanLyk's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/11/15/codewars-3-Which-are-in/" class="post-title-link" itemprop="url">codewars-3: Which are in?</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-              
-
-              <time title="創建時間：2020-11-15 11:20:00 / 修改時間：11:22:36" itemprop="dateCreated datePublished" datetime="2020-11-15T11:20:00+08:00">2020-11-15</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Q:<br>Given two arrays of strings a1 and a2 return a sorted array r in lexicographical order of the strings of a1 which are substrings of strings of a2.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#Example 1: </span><br><span class="line">a1 &#x3D; [&quot;arp&quot;, &quot;live&quot;, &quot;strong&quot;]</span><br><span class="line">a2 &#x3D; [&quot;lively&quot;, &quot;alive&quot;, &quot;harp&quot;, &quot;sharp&quot;, &quot;armstrong&quot;]</span><br><span class="line">returns [&quot;arp&quot;, &quot;live&quot;, &quot;strong&quot;]</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#Example 2: </span><br><span class="line">a1 &#x3D; [&quot;tarp&quot;, &quot;mice&quot;, &quot;bull&quot;]</span><br><span class="line">a2 &#x3D; [&quot;lively&quot;, &quot;alive&quot;, &quot;harp&quot;, &quot;sharp&quot;, &quot;armstrong&quot;]</span><br><span class="line">returns []</span><br></pre></td></tr></table></figure>
-
-<p>A:</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> (</span><br><span class="line">    <span class="string">&quot;sort&quot;</span></span><br><span class="line">    <span class="string">&quot;strings&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">InArray</span><span class="params">(array1 []<span class="keyword">string</span>, array2 []<span class="keyword">string</span>)</span> []<span class="title">string</span></span> &#123;</span><br><span class="line">    <span class="comment">// your code</span></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(array1) == <span class="number">0</span> || <span class="built_in">len</span>(array2) == <span class="number">0</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> []<span class="keyword">string</span>&#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">      </span><br><span class="line">    aySorted := <span class="built_in">make</span>([]<span class="keyword">string</span>, <span class="built_in">len</span>(array1))</span><br><span class="line">    <span class="built_in">copy</span>(aySorted, array1)</span><br><span class="line">    sort.Strings(aySorted)</span><br><span class="line">    </span><br><span class="line">    r := []<span class="keyword">string</span> &#123;&#125;</span><br><span class="line">    checkDup := <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">bool</span>)</span><br><span class="line">    <span class="keyword">for</span> _, candidate := <span class="keyword">range</span> aySorted &#123;</span><br><span class="line">        _, ok := checkDup[candidate]</span><br><span class="line">        <span class="keyword">if</span> ok &#123;</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            checkDup[candidate] = <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> _, s := <span class="keyword">range</span> array2 &#123;</span><br><span class="line">            <span class="keyword">if</span> strings.Contains(s, candidate) &#123;</span><br><span class="line">                r = <span class="built_in">append</span>(r, candidate)</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> r  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -855,7 +865,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-count">24</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
