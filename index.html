@@ -157,6 +157,96 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/11/28/codewars-16-Error-correction-1-Hamming-Code-6-kyu/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ethanlyk">
+      <meta itemprop="description" content="A place to keep progressing">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EthanLyk's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/28/codewars-16-Error-correction-1-Hamming-Code-6-kyu/" class="post-title-link" itemprop="url">codewars-16: Error correction #1 - Hamming Code (6 kyu)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2020-11-28 21:59:00 / 修改時間：22:01:33" itemprop="dateCreated datePublished" datetime="2020-11-28T21:59:00+08:00">2020-11-28</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Q:<br>Background information</p>
+<p>The Hamming Code is used to correct errors, so-called bit flips, in data transmissions. Later in the description follows a detailed explanation of how it works.<br>In this Kata we will implement the Hamming Code with bit length 3; this has some advantages and disadvantages:</p>
+<p>Task 1: Encode function</p>
+<p>Implement the encode function, using the following steps:</p>
+<ul>
+<li>convert every letter of the text to its ASCII value;</li>
+<li>convert ASCII values to 8-bit binary;</li>
+<li>triple every bit;</li>
+<li>concatenate the result;</li>
+</ul>
+<p>For example:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">input: &quot;hey&quot;</span><br><span class="line">--&gt; 104, 101, 121                  &#x2F;&#x2F; ASCII values</span><br><span class="line">--&gt; 01101000, 01100101, 01111001   &#x2F;&#x2F; binary</span><br><span class="line">--&gt; 000111111000111000000000 000111111000000111000111 000111111111111000000111  &#x2F;&#x2F; tripled</span><br><span class="line">--&gt; &quot;000111111000111000000000000111111000000111000111000111111111111000000111&quot;  &#x2F;&#x2F; concatenated</span><br></pre></td></tr></table></figure>
+<p>Task 2: Decode function:</p>
+<p>Check if any errors happened and correct them. Errors will be only bit flips, and not a loss of bits:</p>
+<ul>
+<li>111 –&gt; 101 : this can and will happen</li>
+<li>111 –&gt; 11 : this cannot happen</li>
+</ul>
+<p>Note: the length of the input string is also always divisible by 24 so that you can convert it to an ASCII value.</p>
+<p>Steps:</p>
+<ul>
+<li>Split the input into groups of three characters;</li>
+<li>Check if an error occurred: replace each group with the character that occurs most often, e.g. 010 –&gt; 0, 110 –&gt; 1, etc;</li>
+<li>Take each group of 8 characters and convert that binary number;</li>
+<li>Convert the binary values to decimal (ASCII);</li>
+<li>Convert the ASCII values to characters and concatenate the result</li>
+</ul>
+<p>For example:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">input: &quot;100111111000111001000010000111111000000111001111000111110110111000010111&quot;</span><br><span class="line">--&gt; 100, 111, 111, 000, 111, 001, ...  &#x2F;&#x2F; triples</span><br><span class="line">--&gt;  0,   1,   1,   0,   1,   0,  ...  &#x2F;&#x2F; corrected bits</span><br><span class="line">--&gt; 01101000, 01100101, 01111001       &#x2F;&#x2F; bytes</span><br><span class="line">--&gt; 104, 101, 121                      &#x2F;&#x2F; ASCII values</span><br><span class="line">--&gt; &quot;hey&quot;</span><br></pre></td></tr></table></figure>
+
+
+<p>A:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># python</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">encode</span>(<span class="params">string</span>):</span></span><br><span class="line">    bits = []</span><br><span class="line">    <span class="keyword">for</span> c <span class="keyword">in</span> string:</span><br><span class="line">        asc = ord(c)</span><br><span class="line">        bits += [b*<span class="number">3</span> <span class="keyword">for</span> b <span class="keyword">in</span> format(asc, <span class="string">&#x27;b&#x27;</span>).zfill(<span class="number">8</span>)]</span><br><span class="line">        </span><br><span class="line">    bits = <span class="string">&#x27;&#x27;</span>.join(bits)</span><br><span class="line">    <span class="keyword">return</span> bits</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">decode</span>(<span class="params">bits</span>):</span></span><br><span class="line">    LEN_HAMMING = <span class="number">3</span></span><br><span class="line">    bs = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(bits), LEN_HAMMING):</span><br><span class="line">        bit = bits[i:i+LEN_HAMMING]</span><br><span class="line">        c0 = bit.count(<span class="string">&#x27;0&#x27;</span>)</span><br><span class="line">        c1 = bit.count(<span class="string">&#x27;1&#x27;</span>)</span><br><span class="line">        bs += <span class="string">&#x27;0&#x27;</span> <span class="keyword">if</span> c0 &gt; c1 <span class="keyword">else</span> <span class="string">&#x27;1&#x27;</span></span><br><span class="line"></span><br><span class="line">    string = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    LEN_BYTE = <span class="number">8</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(bs), LEN_BYTE):</span><br><span class="line">        bin = bs[i:i+LEN_BYTE]</span><br><span class="line">        integer = int(bin, <span class="number">2</span>)</span><br><span class="line">        string += chr(integer)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> string</span><br><span class="line"></span><br><span class="line"><span class="comment"># Ref</span></span><br><span class="line"><span class="comment"># def encode(string):</span></span><br><span class="line"><span class="comment">#     values = &quot;&quot;.join(format(x, &quot;08b&quot;) for x in map(ord, string))</span></span><br><span class="line"><span class="comment">#     return values.replace(&quot;0&quot;, &quot;000&quot;).replace(&quot;1&quot;, &quot;111&quot;)</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># def decode(bits):</span></span><br><span class="line"><span class="comment">#     bs = &quot;&quot;.join(&quot;0&quot; if xs.count(&quot;0&quot;) &gt;= 2 else &quot;1&quot; for xs in zip(*[iter(bits)] * 3))</span></span><br><span class="line"><span class="comment">#     return &quot;&quot;.join(chr(int(&quot;&quot;.join(b), 2)) for b in zip(*[iter(bs)] * 8))</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/11/27/codewars-15-Sums-of-Parts-6-kyu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -753,68 +843,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/11/18/codewars-6-Who-likes-it/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ethanlyk">
-      <meta itemprop="description" content="A place to keep progressing">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="EthanLyk's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/11/18/codewars-6-Who-likes-it/" class="post-title-link" itemprop="url">codewars-6: Who likes it?</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-              
-
-              <time title="創建時間：2020-11-18 20:57:00 / 修改時間：20:58:21" itemprop="dateCreated datePublished" datetime="2020-11-18T20:57:00+08:00">2020-11-18</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Q:<br>You probably know the “like” system from Facebook and other pages. People can “like” blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.</p>
-<p>Implement a function likes :: [String] -&gt; String, which must take in input array, containing the names of people who like an item. It must return the display text as shown in the examples:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">likes &#123;&#125; &#x2F;&#x2F; must be &quot;no one likes this&quot;</span><br><span class="line">likes &#123;&quot;Peter&quot;&#125; &#x2F;&#x2F; must be &quot;Peter likes this&quot;</span><br><span class="line">likes &#123;&quot;Jacob&quot;, &quot;Alex&quot;&#125; &#x2F;&#x2F; must be &quot;Jacob and Alex like this&quot;</span><br><span class="line">likes &#123;&quot;Max&quot;, &quot;John&quot;, &quot;Mark&quot;&#125; &#x2F;&#x2F; must be &quot;Max, John and Mark like this&quot;</span><br><span class="line">likes &#123;&quot;Alex&quot;, &quot;Jacob&quot;, &quot;Mark&quot;, &quot;Max&quot;&#125; &#x2F;&#x2F; must be &quot;Alex, Jacob and 2 others like this&quot;</span><br></pre></td></tr></table></figure>
-<p>A:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// java</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">whoLikesIt</span><span class="params">(String... names)</span> </span>&#123;</span><br><span class="line">        String like = <span class="string">&quot;like&quot;</span>;</span><br><span class="line"></span><br><span class="line">        String subject;</span><br><span class="line">        <span class="keyword">switch</span> (names.length) &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">                subject = <span class="string">&quot;no one&quot;</span>;</span><br><span class="line">                like = <span class="string">&quot;likes&quot;</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">                </span><br><span class="line">            <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">                subject = names[<span class="number">0</span>];</span><br><span class="line">                like = <span class="string">&quot;likes&quot;</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">                </span><br><span class="line">            <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">                subject = String.format(<span class="string">&quot;%s and %s&quot;</span>, names[<span class="number">0</span>], names[<span class="number">1</span>]);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">                </span><br><span class="line">            <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">                subject = String.format(<span class="string">&quot;%s, %s and %s&quot;</span>, names[<span class="number">0</span>], names[<span class="number">1</span>], names[<span class="number">2</span>]);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">                </span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                subject = String.format(<span class="string">&quot;%s, %s and %d others&quot;</span>, names[<span class="number">0</span>], names[<span class="number">1</span>], names.length-<span class="number">2</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        String str = String.format(<span class="string">&quot;%s %s this&quot;</span>, subject, like);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> str;</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -884,7 +912,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">27</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
