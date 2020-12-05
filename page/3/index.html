@@ -157,6 +157,157 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/11/13/codewars-2-Morse-code-1-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ethanlyk">
+      <meta itemprop="description" content="A place to keep progressing">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EthanLyk's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/13/codewars-2-Morse-code-1-3/" class="post-title-link" itemprop="url">codewars-2: Morse code (1/3)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2020-11-13 19:38:00" itemprop="dateCreated datePublished" datetime="2020-11-13T19:38:00+08:00">2020-11-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2020-12-05 11:28:18" itemprop="dateModified" datetime="2020-12-05T11:28:18+08:00">2020-12-05</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Q: The Morse code encodes every character as a sequence of “dots” and “dashes”. Your task is to implement a function that would take the morse code as input and return a decoded human-readable string. </p>
+<p>For example:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">decodeMorse(&#39;.... . -.--   .--- ..- -.. .&#39;)</span><br><span class="line">&#x2F;&#x2F;should return &quot;HEY JUDE&quot;</span><br></pre></td></tr></table></figure>
+<p>Kotlin: MorseCode[“.–”] ?: “” or MorseCode.getOrDefault(“.–”, “”)</p>
+<p>A:</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/11/13/codewars-2-Morse-code-1-3/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/11/11/codewars-1-Convert-string-to-camel-case/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ethanlyk">
+      <meta itemprop="description" content="A place to keep progressing">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EthanLyk's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/11/codewars-1-Convert-string-to-camel-case/" class="post-title-link" itemprop="url">codewars-1: Convert string to camel case</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2020-11-11 22:34:00" itemprop="dateCreated datePublished" datetime="2020-11-11T22:34:00+08:00">2020-11-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2020-12-05 11:28:07" itemprop="dateModified" datetime="2020-12-05T11:28:07+08:00">2020-12-05</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Q: Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case).<br>Examples</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">toCamelCase(&quot;the-stealth-warrior&quot;); &#x2F;&#x2F; returns &quot;theStealthWarrior&quot;</span><br><span class="line"></span><br><span class="line">toCamelCase(&quot;The_Stealth_Warrior&quot;); &#x2F;&#x2F; returns &quot;TheStealthWarrior&quot;</span><br></pre></td></tr></table></figure>
+
+<p>A:</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/11/11/codewars-1-Convert-string-to-camel-case/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/11/10/leetcode-4-Move-Zeroes/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -180,10 +331,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2020-11-10 21:36:00 / 修改時間：21:40:21" itemprop="dateCreated datePublished" datetime="2020-11-10T21:36:00+08:00">2020-11-10</time>
+              <time title="創建時間：2020-11-10 21:36:00" itemprop="dateCreated datePublished" datetime="2020-11-10T21:36:00+08:00">2020-11-10</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2020-12-05 11:27:55" itemprop="dateModified" datetime="2020-12-05T11:27:55+08:00">2020-12-05</time>
+              </span>
 
           
 
@@ -201,7 +358,14 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: [0,1,0,3,12]</span><br><span class="line">Output: [1,3,12,0,0]</span><br></pre></td></tr></table></figure>
 
 <p>A:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># python</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">moveZeroes</span>(<span class="params">self, nums: List[int]</span>) -&gt; <span class="keyword">None</span>:</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        Do not return anything, modify nums in-place instead.</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">for</span> i, v <span class="keyword">in</span> enumerate(nums):</span><br><span class="line">          <span class="keyword">if</span> v == <span class="number">0</span>:</span><br><span class="line">            (idx, noneZero) = self.findNoneZero(i+<span class="number">1</span>, nums[i+<span class="number">1</span>:])</span><br><span class="line">            <span class="keyword">if</span> idx == <span class="number">-1</span>:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">      </span><br><span class="line">            nums[i] = noneZero</span><br><span class="line">            nums[idx] = <span class="number">0</span>        </span><br><span class="line">            </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findNoneZero</span>(<span class="params">self, offset, ay</span>):</span></span><br><span class="line">        <span class="keyword">for</span> i, v <span class="keyword">in</span> enumerate(ay):</span><br><span class="line">            <span class="keyword">if</span>  v != <span class="number">0</span>:</span><br><span class="line">                <span class="keyword">return</span> (i+offset, v)</span><br><span class="line">            </span><br><span class="line">        <span class="keyword">return</span> (<span class="number">-1</span>, <span class="number">0</span>)           </span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/11/10/leetcode-4-Move-Zeroes/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -243,10 +407,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2020-11-09 21:54:00 / 修改時間：21:56:59" itemprop="dateCreated datePublished" datetime="2020-11-09T21:54:00+08:00">2020-11-09</time>
+              <time title="創建時間：2020-11-09 21:54:00" itemprop="dateCreated datePublished" datetime="2020-11-09T21:54:00+08:00">2020-11-09</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2020-12-05 11:27:38" itemprop="dateModified" datetime="2020-12-05T11:27:38+08:00">2020-12-05</time>
+              </span>
 
           
 
@@ -265,7 +435,14 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: nums &#x3D; [-2,1,-3,4,-1,2,1,-5,4]</span><br><span class="line">Output: 6</span><br><span class="line">Explanation: [4,-1,2,1] has the largest sum &#x3D; 6.</span><br></pre></td></tr></table></figure>
 
 <p>A:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// js</span></span><br><span class="line"><span class="keyword">var</span> maxSubArray = <span class="function"><span class="keyword">function</span>(<span class="params">nums</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (nums.length == <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> nums[<span class="number">0</span>]</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> max = nums[<span class="number">0</span>]</span><br><span class="line">    <span class="keyword">var</span> sum</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        sum = getMax(nums, i)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (sum &gt; max) &#123;</span><br><span class="line">            max = sum</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> max</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getMax</span>(<span class="params">ay, idx</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> max = ay[idx]</span><br><span class="line">    <span class="keyword">var</span> sum = <span class="number">0</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = idx; i &lt; ay.length; i++) &#123;</span><br><span class="line">        sum = sum + ay[i]</span><br><span class="line">        <span class="keyword">if</span> (sum &gt; max) &#123;</span><br><span class="line">            max = sum</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> max</span><br><span class="line">&#125;    </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/11/09/leetcode-3-Maximum-Subarray/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -315,7 +492,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2020-11-09 21:56:10" itemprop="dateModified" datetime="2020-11-09T21:56:10+08:00">2020-11-09</time>
+                <time title="修改時間：2020-12-05 11:27:27" itemprop="dateModified" datetime="2020-12-05T11:27:27+08:00">2020-12-05</time>
               </span>
 
           
@@ -336,7 +513,14 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Input: 19</span><br><span class="line">Output: true</span><br><span class="line">Explanation: </span><br><span class="line">12 + 92 &#x3D; 82</span><br><span class="line">82 + 22 &#x3D; 68</span><br><span class="line">62 + 82 &#x3D; 100</span><br><span class="line">12 + 02 + 02 &#x3D; 1</span><br></pre></td></tr></table></figure>
 
 <p>A:</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// go</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">isHappy</span><span class="params">(n <span class="keyword">int</span>)</span> <span class="title">bool</span></span> &#123;</span><br><span class="line">    bHappy := <span class="literal">false</span></span><br><span class="line">    </span><br><span class="line">    iTry := <span class="number">0</span></span><br><span class="line">    iTryMax := <span class="number">50</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> bHappy == <span class="literal">false</span> &amp;&amp; iTry &lt; iTryMax &#123; </span><br><span class="line">        ayDigit := toDigit(n)</span><br><span class="line">        sum := sumOfDigitSquare(ayDigit)</span><br><span class="line">        <span class="comment">// fmt.Println(iTry, &quot;, num: &quot;, n, &quot; =&gt; sum: &quot;, sum)</span></span><br><span class="line">        </span><br><span class="line">        bHappy = (sum == <span class="number">1</span>)</span><br><span class="line">        </span><br><span class="line">        n = sum</span><br><span class="line">        iTry += <span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> bHappy</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">sumOfDigitSquare</span><span class="params">(ay []<span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">    sum := <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="built_in">len</span>(ay); i++ &#123;</span><br><span class="line">        sum += ay[i] * ay[i]</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> sum</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">toDigit</span><span class="params">(num <span class="keyword">int</span>)</span> []<span class="title">int</span></span> &#123;</span><br><span class="line">    byTen := <span class="number">10</span></span><br><span class="line">    div := num</span><br><span class="line">    <span class="built_in">len</span> := <span class="number">1</span> </span><br><span class="line">    <span class="keyword">for</span> (div / byTen) &gt; <span class="number">0</span> &#123;</span><br><span class="line">        <span class="built_in">len</span>++</span><br><span class="line">        div /= byTen</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    ayDigit := <span class="built_in">make</span>([]<span class="keyword">int</span>, <span class="built_in">len</span>)</span><br><span class="line">    <span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="built_in">len</span>; i++ &#123;</span><br><span class="line">        ayDigit[i] = num % byTen</span><br><span class="line">        num = num / byTen</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> ayDigit</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/11/08/leetcode-2-Happy-Number/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -386,7 +570,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2020-11-09 21:56:39" itemprop="dateModified" datetime="2020-11-09T21:56:39+08:00">2020-11-09</time>
+                <time title="修改時間：2020-12-05 11:27:14" itemprop="dateModified" datetime="2020-12-05T11:27:14+08:00">2020-12-05</time>
               </span>
 
           
@@ -404,10 +588,14 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: nums &#x3D; [4,1,2,1,2]</span><br><span class="line">Output: 4</span><br></pre></td></tr></table></figure>
 
 <p>A:</p>
-<ul>
-<li>Use map to trace count (JAVA)</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// java</span></span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">singleNumber</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> single = nums[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line">		HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">		    <span class="keyword">if</span> (map.containsKey(nums[i]) == <span class="keyword">false</span>) &#123;</span><br><span class="line">		        map.put(nums[i], <span class="number">1</span>);</span><br><span class="line">		    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		        <span class="keyword">int</span> cnt = map.get(nums[i]);</span><br><span class="line">		        map.put(nums[i], cnt+<span class="number">1</span>);</span><br><span class="line">		    &#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span> (Integer key: map.keySet()) &#123;</span><br><span class="line">		    <span class="keyword">if</span> (map.get(key) == <span class="number">1</span>) &#123;</span><br><span class="line">		        single = key;</span><br><span class="line">		    &#125;</span><br><span class="line">		&#125;   </span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> single;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/11/08/leetcode-1-Single-Number/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -559,10 +747,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2020-10-22 21:57:00 / 修改時間：22:03:26" itemprop="dateCreated datePublished" datetime="2020-10-22T21:57:00+08:00">2020-10-22</time>
+              <time title="創建時間：2020-10-22 21:57:00" itemprop="dateCreated datePublished" datetime="2020-10-22T21:57:00+08:00">2020-10-22</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2020-12-05 11:26:25" itemprop="dateModified" datetime="2020-12-05T11:26:25+08:00">2020-12-05</time>
+              </span>
 
           
 
@@ -578,7 +772,15 @@
           <h6 id="使用時機"><a href="#使用時機" class="headerlink" title="使用時機"></a>使用時機</h6><ul>
 <li>無法在 main thread 或要背景執行，但需要等待執行結果</li>
 </ul>
-<h6 id="Sample-code"><a href="#Sample-code" class="headerlink" title="Sample code"></a>Sample code</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">IsUrlAlive</span><span class="params">(String myUrl)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">final</span> Object lock = <span class="keyword">new</span> Object();</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">final</span> URL url = <span class="keyword">new</span> URL(myUrl);</span><br><span class="line">        <span class="keyword">final</span> <span class="keyword">boolean</span>[] bAlive = <span class="keyword">new</span> <span class="keyword">boolean</span>[<span class="number">1</span>];</span><br><span class="line">        Thread th = <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    HttpURLConnection hc = (HttpURLConnection) url.openConnection();</span><br><span class="line">                    bAlive[<span class="number">0</span>] = (hc.getResponseCode() == <span class="number">200</span>);</span><br><span class="line"></span><br><span class="line">                    <span class="keyword">synchronized</span> (lock) &#123;</span><br><span class="line">                        lock.notify();</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        th.start();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">synchronized</span> (lock) &#123;</span><br><span class="line">            lock.wait();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> bAlive[<span class="number">0</span>];</span><br><span class="line">    &#125; <span class="keyword">catch</span> (IOException | InterruptedException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="Sample-code"><a href="#Sample-code" class="headerlink" title="Sample code"></a>Sample code</h6>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/10/22/multi-thread-1-wait-notify/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -753,7 +955,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2020-10-11 20:47:35" itemprop="dateModified" datetime="2020-10-11T20:47:35+08:00">2020-10-11</time>
+                <time title="修改時間：2020-12-05 11:24:30" itemprop="dateModified" datetime="2020-12-05T11:24:30+08:00">2020-12-05</time>
               </span>
 
           
@@ -777,191 +979,10 @@
 </ul>
 </li>
 </ul>
-<h5 id="Sample-code"><a href="#Sample-code" class="headerlink" title="Sample code"></a>Sample code</h5><ul>
-<li><p>activity_main.xml</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">FrameLayout</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">&quot;@+id/idFragmentContent&quot;</span></span></span><br><span class="line"><span class="tag">    /&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li><p>activity</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">FragmentActivity</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> ID_PASSWORD = <span class="number">0x10</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> ID_HOME = ID_PASSWORD + <span class="number">1</span>; <span class="comment">// 0x11</span></span><br><span class="line">    </span><br><span class="line">    HashMap&lt;Integer, BaseFragment&gt; mFragments = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);   </span><br><span class="line">        </span><br><span class="line">        mFragments.put(ID_PASSWORD, <span class="keyword">new</span> PasswordFragment(<span class="keyword">this</span>, ID_PASSWORD));</span><br><span class="line">        mFragments.put(ID_HOME, <span class="keyword">new</span> HomeFragment(<span class="keyword">this</span>, ID_HOME));     </span><br><span class="line">        </span><br><span class="line">        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();</span><br><span class="line">        transaction.replace(R.id.idFragmentContent, mFragments.get(ID_PASSWORD));</span><br><span class="line">        transaction.commit();        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">* fragment</span><br><span class="line"></span><br><span class="line">```java</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">BaseFragment</span> <span class="keyword">extends</span> <span class="title">Fragment</span> </span>&#123;</span><br><span class="line">    <span class="keyword">protected</span> MyActivity mContainer;</span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">int</span> mId;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">BaseFragment</span><span class="params">(MyActivity container, <span class="keyword">int</span> id)</span> </span>&#123;</span><br><span class="line">        mContainer = container;</span><br><span class="line">        mId = id;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HomeFragment</span> <span class="keyword">extends</span> <span class="title">BaseFragment</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">HomeFragment</span><span class="params">(MyActivity container, <span class="keyword">int</span> id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(container, id);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> View <span class="title">onCreateView</span><span class="params">(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        View view = inflater.inflate(R.layout.fragment_home, container, <span class="keyword">false</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> view;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PasswordFragment</span> <span class="keyword">extends</span> <span class="title">BaseFragment</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">PasswordFragment</span><span class="params">(MyActivity container, <span class="keyword">int</span> id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(container, id);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> View <span class="title">onCreateView</span><span class="params">(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        View view = inflater.inflate(R.layout.fragment_password, container, <span class="keyword">false</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> view;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>fragment_home.xml</p>
-</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">androidx.constraintlayout.widget.ConstraintLayout</span> <span class="attr">xmlns:android</span>=<span class="string">&quot;http://schemas.android.com/apk/res/android&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    &gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">androidx.constraintlayout.widget.ConstraintLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h5 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h5><ul>
-<li><a target="_blank" rel="noopener" href="https://developer.android.com/guide/components/fragments?hl=zh-tw">google developer guides: Fragment</a></li>
-<li><a target="_blank" rel="noopener" href="https://medium.com/@waynechen323/android-%E5%9F%BA%E7%A4%8E%E7%9A%84-fragment-%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F-730858c12a43">Android 基礎的 Fragment 使用方式</a></li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/10/03/android-service/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ethanlyk">
-      <meta itemprop="description" content="A place to keep progressing">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="EthanLyk's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/10/03/android-service/" class="post-title-link" itemprop="url">Android-1: Service</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2020-10-03 16:40:27" itemprop="dateCreated datePublished" datetime="2020-10-03T16:40:27+08:00">2020-10-03</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2020-10-11 16:50:36" itemprop="dateModified" datetime="2020-10-11T16:50:36+08:00">2020-10-11</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h5 id="使用時機"><a href="#使用時機" class="headerlink" title="使用時機"></a>使用時機</h5><ul>
-<li>當有需要在背景執行動作時，可使用 service</li>
-<li>Service 啟動有 2 種作法<ul>
-<li>若 Activity 有與 Service 做資料通訊，可使用 bindService()</li>
-<li>若 Activity 無須與 Service 做資料通訊，可使用 startService()</li>
-</ul>
-</li>
-</ul>
-<h5 id="Service-由-Activity-啟動時的執行順序"><a href="#Service-由-Activity-啟動時的執行順序" class="headerlink" title="Service 由 Activity 啟動時的執行順序"></a>Service 由 Activity 啟動時的執行順序</h5><ol>
-<li>MainActivity::bindService() </li>
-<li>Service::onCreate() -&gt; Service::onBind() </li>
-<li>MainActivity::onServiceConnected</li>
-<li>…</li>
-<li>MainActivity::unbindService()</li>
-<li>Service::onUnbind() -&gt; Service::onDestroy()</li>
-</ol>
-<h5 id="Sample-Code"><a href="#Sample-Code" class="headerlink" title="Sample Code"></a>Sample Code</h5>
+<h5 id="Sample-code"><a href="#Sample-code" class="headerlink" title="Sample code"></a>Sample code</h5>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/10/03/android-service/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/10/03/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ethanlyk">
-      <meta itemprop="description" content="A place to keep progressing">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="EthanLyk's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/10/03/hello-world/" class="post-title-link" itemprop="url">My Hexo</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2020-10-03 09:52:20" itemprop="dateCreated datePublished" datetime="2020-10-03T09:52:20+08:00">2020-10-03</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2020-10-11 20:48:28" itemprop="dateModified" datetime="2020-10-11T20:48:28+08:00">2020-10-11</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h5 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h5><blockquote>
-<p>Hexo 是基於 Node.js 開發的套件</p>
-</blockquote>
-<h5 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h5><ol>
-<li>安裝 npm</li>
-<li>安裝 git</li>
-<li>安裝 hexo</li>
-<li>設定 hexo</li>
-<li>佈署至 github</li>
-</ol>
-<h5 id="Ubuntu-環境安裝-hexo"><a href="#Ubuntu-環境安裝-hexo" class="headerlink" title="Ubuntu 環境安裝 hexo"></a>Ubuntu 環境安裝 hexo</h5><ol>
-<li><p>安裝 npm: <code>sudo apt-get install npm</code></p>
-</li>
-<li><p>安裝 git: <code>sudo apt-get install git</code></p>
-</li>
-<li><p>安裝 hexo: <code>npm install -g hexo-cli</code></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/10/03/hello-world/#more" rel="contents">
+              <a class="btn" href="/2020/10/10/android-2-fragment/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -984,7 +1005,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一頁"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一頁"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一頁"></i></a>
   </nav>
 
 
@@ -1050,7 +1071,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">32</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>

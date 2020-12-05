@@ -28,7 +28,7 @@
 <meta property="og:description" content="Q: Say you have an array prices for which the ith element is the price of a given stock on day i. Design an algorithm to find the maximum profit. You may complete as many transactions as you like (i.e">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2020-11-14T13:11:00.000Z">
-<meta property="article:modified_time" content="2020-11-14T13:19:09.644Z">
+<meta property="article:modified_time" content="2020-12-05T03:28:28.889Z">
 <meta property="article:author" content="ethanlyk">
 <meta property="article:tag" content="java">
 <meta property="article:tag" content="leetcode">
@@ -184,10 +184,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2020-11-14 21:11:00 / 修改時間：21:19:09" itemprop="dateCreated datePublished" datetime="2020-11-14T21:11:00+08:00">2020-11-14</time>
+              <time title="創建時間：2020-11-14 21:11:00" itemprop="dateCreated datePublished" datetime="2020-11-14T21:11:00+08:00">2020-11-14</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2020-12-05 11:28:28" itemprop="dateModified" datetime="2020-12-05T11:28:28+08:00">2020-12-05</time>
+              </span>
 
           
 
@@ -213,6 +219,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: [7,6,4,3,1]</span><br><span class="line">Output: 0</span><br></pre></td></tr></table></figure>
 <p>Explanation: In this case, no transaction is done, i.e. max profit = 0.</p>
 <p>A:</p>
+<a id="more"></a>
 <ul>
 <li>Result: =&gt; Try to resolve it other day &gt;_&lt;<ul>
 <li>198 / 200 test cases passed.</li>
@@ -221,34 +228,7 @@
 </ul>
 </li>
 </ul>
-<pre><code class="java">class Solution &#123;
-    public int maxProfit(int[] prices) &#123;
-        int preTotal = 0;
-        for (int idxMin = 0; idxMin &lt; prices.length; idxMin++) &#123;
-            int start = idxMin + 1;
-            int count = prices.length - start;
-            for (int i = 0; i &lt; count; i++) &#123;
-                int total = 0;
-                int remainLen = prices.length - start - i;
-                int subArrayLen = remainLen-1;  // Exclude the next one
-                if (subArrayLen &gt; 0) &#123;
-                    int[] subArray = new int[subArrayLen];
-                    System.arraycopy(prices, start+1+i, subArray, 0, subArrayLen);
-                    total = prices[start+i] - prices[idxMin] + maxProfit(subArray);
-                &#125; else &#123;
-                    total = prices[start+i] - prices[idxMin];
-                &#125;
-
-                if (total &gt; preTotal) &#123;
-                    preTotal = total;
-                &#125;
-            &#125;
-        &#125;
-
-        return preTotal; 
-    &#125;
-&#125;</code></pre>
-
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(<span class="keyword">int</span>[] prices)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> preTotal = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> idxMin = <span class="number">0</span>; idxMin &lt; prices.length; idxMin++) &#123;</span><br><span class="line">    		<span class="keyword">int</span> start = idxMin + <span class="number">1</span>;</span><br><span class="line">    		<span class="keyword">int</span> count = prices.length - start;</span><br><span class="line">    		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; count; i++) &#123;</span><br><span class="line">    		    <span class="keyword">int</span> total = <span class="number">0</span>;</span><br><span class="line">    		    <span class="keyword">int</span> remainLen = prices.length - start - i;</span><br><span class="line">        	    <span class="keyword">int</span> subArrayLen = remainLen-<span class="number">1</span>;  <span class="comment">// Exclude the next one</span></span><br><span class="line">        	    <span class="keyword">if</span> (subArrayLen &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            	    <span class="keyword">int</span>[] subArray = <span class="keyword">new</span> <span class="keyword">int</span>[subArrayLen];</span><br><span class="line">            	    System.arraycopy(prices, start+<span class="number">1</span>+i, subArray, <span class="number">0</span>, subArrayLen);</span><br><span class="line">            	    total = prices[start+i] - prices[idxMin] + maxProfit(subArray);</span><br><span class="line">        	    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        	        total = prices[start+i] - prices[idxMin];</span><br><span class="line">        	    &#125;</span><br><span class="line">        	    </span><br><span class="line">        	    <span class="keyword">if</span> (total &gt; preTotal) &#123;</span><br><span class="line">        	        preTotal = total;</span><br><span class="line">        	    &#125;</span><br><span class="line">    		&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">return</span> preTotal; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -345,7 +325,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">32</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>

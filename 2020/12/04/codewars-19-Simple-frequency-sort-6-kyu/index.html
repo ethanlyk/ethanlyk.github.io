@@ -28,7 +28,7 @@
 <meta property="og:description" content="Q:In this Kata, you will sort elements in an array by decreasing frequency of elements. If two elements have the same frequency, sort them by increasing value. 12solve([2,3,5,3,7,9,5,3,7]) &#x3D; [3,3">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2020-12-04T12:36:00.000Z">
-<meta property="article:modified_time" content="2020-12-04T12:38:16.035Z">
+<meta property="article:modified_time" content="2020-12-05T03:30:55.659Z">
 <meta property="article:author" content="ethanlyk">
 <meta property="article:tag" content="codewars">
 <meta property="article:tag" content="js">
@@ -184,10 +184,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2020-12-04 20:36:00 / 修改時間：20:38:16" itemprop="dateCreated datePublished" datetime="2020-12-04T20:36:00+08:00">2020-12-04</time>
+              <time title="創建時間：2020-12-04 20:36:00" itemprop="dateCreated datePublished" datetime="2020-12-04T20:36:00+08:00">2020-12-04</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2020-12-05 11:30:55" itemprop="dateModified" datetime="2020-12-05T11:30:55+08:00">2020-12-05</time>
+              </span>
 
           
 
@@ -204,6 +210,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">solve([2,3,5,3,7,9,5,3,7]) &#x3D; [3,3,3,5,5,7,7,2,9]</span><br><span class="line">--we sort by highest frequency to lowest frequency. If two elements have same frequency, we sort by increasing value</span><br></pre></td></tr></table></figure>
 
 <p>A:</p>
+<a id="more"></a>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// js</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solve</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> mapCount = <span class="keyword">new</span> <span class="built_in">Map</span>()</span><br><span class="line">    arr.forEach(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> cnt = mapCount.get(item)</span><br><span class="line">        <span class="keyword">if</span> (cnt === <span class="literal">undefined</span>) &#123;</span><br><span class="line">            mapCount.set(item, <span class="number">1</span>)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            mapCount.set(item, cnt+<span class="number">1</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> aySorted = <span class="built_in">Array</span>.from(mapCount).sort(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (b[<span class="number">1</span>] == a[<span class="number">1</span>]) &#123;</span><br><span class="line">            <span class="keyword">return</span> a[<span class="number">0</span>] - b[<span class="number">0</span>]</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> b[<span class="number">1</span>] - a[<span class="number">1</span>]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> ayRet = []</span><br><span class="line">    aySorted.forEach(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; item[<span class="number">1</span>]; i++) &#123;</span><br><span class="line">            ayRet.push(item[<span class="number">0</span>])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> ayRet  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Ref1</span></span><br><span class="line"><span class="comment">// function solve(arr)&#123;</span></span><br><span class="line"><span class="comment">//   var r=&#123;&#125;</span></span><br><span class="line"><span class="comment">//   for(var n of arr) r[n]=r[n]+1||1</span></span><br><span class="line"><span class="comment">//   return arr.slice().sort((a,b)=&gt;r[b]-r[a]||a-b)</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Ref2</span></span><br><span class="line"><span class="comment">// function solve(arr)&#123;</span></span><br><span class="line"><span class="comment">//   let obj = &#123;&#125;</span></span><br><span class="line"><span class="comment">//   arr.forEach(item =&gt; obj[item] = (obj[item] + 1 || 1 ))</span></span><br><span class="line"><span class="comment">//   return arr.sort((a,b) =&gt; obj[b] === obj[a] ?  a - b : obj[b] - obj[a])</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
     </div>
 
@@ -226,7 +233,10 @@
     <a href="/2020/12/03/codewars-18-Simple-string-indices-6-kyu/" rel="prev" title="codewars-18: Simple string indices (6 kyu)">
       <i class="fa fa-chevron-left"></i> codewars-18: Simple string indices (6 kyu)
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/12/05/GCP-3-Create-an-Internal-Load-Balancer/" rel="next" title="GCP-3: Create an Internal Load Balancer">
+      GCP-3: Create an Internal Load Balancer <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -298,7 +308,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">32</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>

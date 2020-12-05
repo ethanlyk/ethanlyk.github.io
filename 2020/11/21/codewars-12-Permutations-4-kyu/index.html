@@ -28,7 +28,7 @@
 <meta property="og:description" content="Q:In this kata you have to create all permutations of an input string and remove duplicates, if present. This means, you have to shuffle all letters from the input in all possible orders. Examples: 12">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2020-11-21T13:26:00.000Z">
-<meta property="article:modified_time" content="2020-11-21T13:27:39.813Z">
+<meta property="article:modified_time" content="2020-12-05T03:29:44.326Z">
 <meta property="article:author" content="ethanlyk">
 <meta property="article:tag" content="codewars">
 <meta property="article:tag" content="python">
@@ -184,10 +184,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2020-11-21 21:26:00 / 修改時間：21:27:39" itemprop="dateCreated datePublished" datetime="2020-11-21T21:26:00+08:00">2020-11-21</time>
+              <time title="創建時間：2020-11-21 21:26:00" itemprop="dateCreated datePublished" datetime="2020-11-21T21:26:00+08:00">2020-11-21</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2020-12-05 11:29:44" itemprop="dateModified" datetime="2020-12-05T11:29:44+08:00">2020-12-05</time>
+              </span>
 
           
 
@@ -205,6 +211,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">permutations(&#39;a&#39;); # [&#39;a&#39;]</span><br><span class="line">permutations(&#39;ab&#39;); # [&#39;ab&#39;, &#39;ba&#39;]</span><br><span class="line">permutations(&#39;aabb&#39;); # [&#39;aabb&#39;, &#39;abab&#39;, &#39;abba&#39;, &#39;baab&#39;, &#39;baba&#39;, &#39;bbaa&#39;]</span><br></pre></td></tr></table></figure>
 <p>The order of the permutations doesn’t matter.</p>
 <p>A:</p>
+<a id="more"></a>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># python</span></span><br><span class="line">permSet = set()</span><br><span class="line">   </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">extraToFirst</span>(<span class="params">idx, string</span>):</span></span><br><span class="line">    <span class="keyword">return</span> string[idx]+string[:idx]+string[idx+<span class="number">1</span>:]</span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">doPermutation</span>(<span class="params">pre, string</span>):</span></span><br><span class="line">    <span class="keyword">if</span> len(string) == <span class="number">2</span>:</span><br><span class="line">        permSet.add(pre+string)</span><br><span class="line">        permSet.add(pre+string[<span class="number">1</span>]+string[<span class="number">0</span>])</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">        </span><br><span class="line">    <span class="keyword">for</span> (i, _) <span class="keyword">in</span> enumerate(string):</span><br><span class="line">        candidate = extraToFirst(i, string)    </span><br><span class="line">        <span class="keyword">for</span> (idx, _) <span class="keyword">in</span> enumerate(candidate):</span><br><span class="line">            s1 = candidate[:idx]</span><br><span class="line">            s2 = candidate[idx:]</span><br><span class="line">            <span class="keyword">if</span> len(s1) &gt; <span class="number">0</span> <span class="keyword">and</span> len(s2) &gt;= <span class="number">2</span>:</span><br><span class="line">                doPermutation(pre+s1, s2)</span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">permutations</span>(<span class="params">string</span>):</span></span><br><span class="line">    permSet.clear()</span><br><span class="line">    string.strip()</span><br><span class="line">    <span class="keyword">if</span> len(string) &lt;= <span class="number">1</span>:</span><br><span class="line">        permSet.add(string)</span><br><span class="line">    <span class="keyword">elif</span> len(string) == <span class="number">2</span>:</span><br><span class="line">        permSet.add(string)</span><br><span class="line">        permSet.add(string[<span class="number">1</span>]+string[<span class="number">0</span>])</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">for</span> (idx, ch) <span class="keyword">in</span> enumerate(string):</span><br><span class="line">            candidate = extraToFirst(idx, string)</span><br><span class="line">            doPermutation(ch, candidate[<span class="number">1</span>:])</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">return</span> list(permSet)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Ref1</span></span><br><span class="line"><span class="comment">#def permutations(s):</span></span><br><span class="line"><span class="comment">#    if len(s) == 0:</span></span><br><span class="line"><span class="comment">#        return []</span></span><br><span class="line"><span class="comment">#    elif len(s) == 1:</span></span><br><span class="line"><span class="comment">#        return [s]</span></span><br><span class="line"><span class="comment">#    else:</span></span><br><span class="line"><span class="comment">#        return set(s[i]+p for i in range(len(s)) for p in permutations(s[:i] + s[i+1:]))</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Ref2</span></span><br><span class="line"><span class="comment">#def permutations(s):        </span></span><br><span class="line"><span class="comment">#    if(len(s)==1): return [s]</span></span><br><span class="line"><span class="comment">#    result=[]</span></span><br><span class="line"><span class="comment">#    for i,v in enumerate(s):</span></span><br><span class="line"><span class="comment">#        result += [v+p for p in permutations(s[:i]+s[i+1:])]</span></span><br><span class="line"><span class="comment">#    return list(set(result))       </span></span><br></pre></td></tr></table></figure>
     </div>
 
@@ -302,7 +309,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">32</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>

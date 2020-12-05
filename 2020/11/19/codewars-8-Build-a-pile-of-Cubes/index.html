@@ -28,7 +28,7 @@
 <meta property="og:description" content="Q:Your task is to construct a building which will be a pile of n cubes. The cube at the bottom will have a volume of n^3, the cube above will have volume of (n-1)^3 and so on until the top which will">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2020-11-19T14:29:00.000Z">
-<meta property="article:modified_time" content="2020-11-19T14:30:37.730Z">
+<meta property="article:modified_time" content="2020-12-05T03:29:02.516Z">
 <meta property="article:author" content="ethanlyk">
 <meta property="article:tag" content="codewars">
 <meta property="article:tag" content="kotlin">
@@ -184,10 +184,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2020-11-19 22:29:00 / 修改時間：22:30:37" itemprop="dateCreated datePublished" datetime="2020-11-19T22:29:00+08:00">2020-11-19</time>
+              <time title="創建時間：2020-11-19 22:29:00" itemprop="dateCreated datePublished" datetime="2020-11-19T22:29:00+08:00">2020-11-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2020-12-05 11:29:02" itemprop="dateModified" datetime="2020-12-05T11:29:02+08:00">2020-12-05</time>
+              </span>
 
           
 
@@ -206,6 +212,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">findNb(1071225) --&gt; 45</span><br><span class="line">findNb(91716553919377) --&gt; -1</span><br></pre></td></tr></table></figure>
 
 <p>A:</p>
+<a id="more"></a>
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// kotlin</span></span><br><span class="line"><span class="keyword">object</span> ASum &#123;</span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">findNb</span><span class="params">(m: <span class="type">Long</span>)</span></span>: <span class="built_in">Long</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> total = <span class="number">0.0</span></span><br><span class="line">        <span class="keyword">var</span> i = <span class="number">0</span></span><br><span class="line">        <span class="keyword">do</span> &#123;</span><br><span class="line">            i++</span><br><span class="line">            total += Math.pow(i.toDouble(), <span class="number">3</span>.toDouble())</span><br><span class="line">        &#125; <span class="keyword">while</span> (total.toLong() &lt; m)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">if</span> (total.toLong() == m) i.toLong() <span class="keyword">else</span> -<span class="number">1</span>        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Ref</span></span><br><span class="line"><span class="comment">    fun findNb(m: Long): Long &#123;</span></span><br><span class="line"><span class="comment">        var sum = 0L</span></span><br><span class="line"><span class="comment">        return generateSequence(1L) &#123; it + 1 &#125;</span></span><br><span class="line"><span class="comment">            .onEach &#123; sum += it*it*it &#125;</span></span><br><span class="line"><span class="comment">            .takeWhile &#123; sum &lt;= m &#125;</span></span><br><span class="line"><span class="comment">            .lastOrNull &#123; sum == m &#125; </span></span><br><span class="line"><span class="comment">            ?: -1</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
     </div>
 
@@ -303,7 +310,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">32</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>

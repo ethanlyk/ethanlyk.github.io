@@ -28,7 +28,7 @@
 <meta property="og:description" content="Q:Two tortoises named A and B must run a race. A starts with an average speed of 720 feet per hour. Young B knows she runs faster than A, and furthermore has not finished her cabbage. When she starts,">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2020-11-20T12:11:00.000Z">
-<meta property="article:modified_time" content="2020-11-20T12:12:14.706Z">
+<meta property="article:modified_time" content="2020-12-05T03:29:13.312Z">
 <meta property="article:author" content="ethanlyk">
 <meta property="article:tag" content="codewars">
 <meta property="article:tag" content="go">
@@ -184,10 +184,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2020-11-20 20:11:00 / 修改時間：20:12:14" itemprop="dateCreated datePublished" datetime="2020-11-20T20:11:00+08:00">2020-11-20</time>
+              <time title="創建時間：2020-11-20 20:11:00" itemprop="dateCreated datePublished" datetime="2020-11-20T20:11:00+08:00">2020-11-20</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2020-12-05 11:29:13" itemprop="dateModified" datetime="2020-12-05T11:29:13+08:00">2020-12-05</time>
+              </span>
 
           
 
@@ -209,6 +215,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">race(720, 850, 70) &#x3D;&gt; [0, 32, 18] or &quot;0 32 18&quot;</span><br><span class="line">race(80, 91, 37)   &#x3D;&gt; [3, 21, 49] or &quot;3 21 49&quot;</span><br></pre></td></tr></table></figure>
 
 <p>A:</p>
+<a id="more"></a>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// go</span></span><br><span class="line"><span class="keyword">const</span> (</span><br><span class="line">    HOUR = <span class="number">24</span></span><br><span class="line">    MINUTE = <span class="number">60</span></span><br><span class="line">    SECOND = <span class="number">60</span></span><br><span class="line">    HOUR_SECOND = <span class="number">3600</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Race</span><span class="params">(v1, v2, g <span class="keyword">int</span>)</span> [3]<span class="title">int</span></span> &#123;</span><br><span class="line">  <span class="keyword">if</span> v1 &gt;= v2 &#123;</span><br><span class="line">      <span class="keyword">return</span> [<span class="number">3</span>]<span class="keyword">int</span> &#123;<span class="number">-1</span>, <span class="number">-1</span>, <span class="number">-1</span>&#125;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      time := g / (v2 - v1)</span><br><span class="line">      h := <span class="keyword">int</span>(time) % HOUR</span><br><span class="line">      m := <span class="keyword">int</span>((g * MINUTE) / (v2 - v1)) % MINUTE</span><br><span class="line">      s := <span class="keyword">int</span>((g * HOUR_SECOND) / (v2 - v1)) % SECOND</span><br><span class="line">      <span class="keyword">return</span> [<span class="number">3</span>]<span class="keyword">int</span> &#123;h, m, s&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
@@ -306,7 +313,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">32</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
