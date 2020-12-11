@@ -157,6 +157,74 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/12/11/codewars-23-Detect-Pangram-6-kyu/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ethanlyk">
+      <meta itemprop="description" content="A place to keep progressing">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EthanLyk's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/12/11/codewars-23-Detect-Pangram-6-kyu/" class="post-title-link" itemprop="url">codewars-23: Detect Pangram (6 kyu)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2020-12-11 20:32:00 / 修改時間：20:32:27" itemprop="dateCreated datePublished" datetime="2020-12-11T20:32:00+08:00">2020-12-11</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Q:<br>A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence “The quick brown fox jumps over the lazy dog” is a pangram, because it uses the letters A-Z at least once (case is irrelevant).</p>
+<p>Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.</p>
+<p>A:</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/12/11/codewars-23-Detect-Pangram-6-kyu/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/12/10/codewars-22-Diagonal-Strings-6-kyu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -889,94 +957,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/11/25/codewars-14-Address-Book-by-State-6-kyu/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ethanlyk">
-      <meta itemprop="description" content="A place to keep progressing">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="EthanLyk's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/11/25/codewars-14-Address-Book-by-State-6-kyu/" class="post-title-link" itemprop="url">codewars-14: Address Book by State (6 kyu )</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2020-11-25 22:32:00" itemprop="dateCreated datePublished" datetime="2020-11-25T22:32:00+08:00">2020-11-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2020-12-05 11:30:08" itemprop="dateModified" datetime="2020-12-05T11:30:08+08:00">2020-12-05</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Q:<br>Given a string with friends to visit in different states:</p>
-<p>ad3=”John Daggett, 341 King Road, Plymouth MA<br>Alice Ford, 22 East Broadway, Richmond VA<br>Sal Carpenter, 73 6th Street, Boston MA”</p>
-<p>we want to produce a result that sorts the names by state and lists the name of the state followed by the name of each person residing in that state (people’s names sorted). When the result is printed we get:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Massachusetts</span><br><span class="line">.....^John Daggett 341 King Road Plymouth Massachusetts</span><br><span class="line">.....^Sal Carpenter 73 6th Street Boston Massachusetts</span><br><span class="line">^Virginia</span><br><span class="line">.....^Alice Ford 22 East Broadway Richmond Virginia</span><br></pre></td></tr></table></figure>
-<p>Spaces not being always well seen, in the above result ^ means a white space.</p>
-<p>The resulting string (when not printed) will be:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;Massachusetts\n..... John Daggett 341 King Road Plymouth Massachusetts\n..... Sal Carpenter 73 6th Street Boston Massachusetts\n Virginia\n..... Alice Ford 22 East Broadway Richmond Virginia&quot;</span><br></pre></td></tr></table></figure>
-<p>or (the separator is \n or \r\n depending on the language)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;Massachusetts\r\n..... John Daggett 341 King Road Plymouth Massachusetts\r\n..... Sal Carpenter 73 6th Street Boston Massachusetts\r\n Virginia\r\n..... Alice Ford 22 East Broadway Richmond Virginia&quot;</span><br></pre></td></tr></table></figure>
-<p>Notes</p>
-<ul>
-<li>There can be a blank last line in the given string of addresses.</li>
-<li>The tests only contains CA, MA, OK, PA, VA, AZ, ID, IN for states.</li>
-<li>You can see another example in the “Sample tests”.</li>
-</ul>
-<hr>
-<p>A:</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/11/25/codewars-14-Address-Book-by-State-6-kyu/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1046,14 +1026,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-count">35</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
