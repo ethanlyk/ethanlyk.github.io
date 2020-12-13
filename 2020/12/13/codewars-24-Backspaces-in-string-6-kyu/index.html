@@ -20,17 +20,21 @@
     var CONFIG = {"hostname":"ethanlyk.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="A place to keep progressing">
-<meta property="og:type" content="website">
-<meta property="og:title" content="EthanLyk&#39;s blog">
-<meta property="og:url" content="https://ethanlyk.github.io/tags/python/index.html">
+  <meta name="description" content="Q:Assume “#” is like a backspace in string. This means that string “a#bc#d” actually is “bd” Your task is to process a string with “#” symbols.Examples 1234&quot;abc#d##c&quot;      &#x3D;&#x3D;&gt;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="codewars-24: Backspaces in string (6 kyu)">
+<meta property="og:url" content="https://ethanlyk.github.io/2020/12/13/codewars-24-Backspaces-in-string-6-kyu/index.html">
 <meta property="og:site_name" content="EthanLyk&#39;s blog">
-<meta property="og:description" content="A place to keep progressing">
+<meta property="og:description" content="Q:Assume “#” is like a backspace in string. This means that string “a#bc#d” actually is “bd” Your task is to process a string with “#” symbols.Examples 1234&quot;abc#d##c&quot;      &#x3D;&#x3D;&gt;">
 <meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2020-12-13T06:44:00.000Z">
+<meta property="article:modified_time" content="2020-12-13T06:44:59.800Z">
 <meta property="article:author" content="ethanlyk">
+<meta property="article:tag" content="codewars">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://ethanlyk.github.io/tags/python/">
+<link rel="canonical" href="https://ethanlyk.github.io/2020/12/13/codewars-24-Backspaces-in-string-6-kyu/">
 
 
 <script id="page-configurations">
@@ -38,12 +42,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-TW'
   };
 </script>
 
-  <title>標籤: python | EthanLyk's blog</title>
+  <title>codewars-24: Backspaces in string (6 kyu) | EthanLyk's blog</title>
   
 
 
@@ -151,151 +155,86 @@
         <div class="content-wrap">
           
 
-          <div class="content tag">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">python
-          <small>標籤</small>
-        </h2>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/12/13/codewars-24-Backspaces-in-string-6-kyu/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ethanlyk">
+      <meta itemprop="description" content="A place to keep progressing">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EthanLyk's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          codewars-24: Backspaces in string (6 kyu)
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2020-12-13 14:44:00 / 修改時間：14:44:59" itemprop="dateCreated datePublished" datetime="2020-12-13T14:44:00+08:00">2020-12-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
+        <p>Q:<br>Assume “#” is like a backspace in string. This means that string “a#bc#d” actually is “bd”</p>
+<p>Your task is to process a string with “#” symbols.<br>Examples</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&quot;abc#d##c&quot;      &#x3D;&#x3D;&gt;  &quot;ac&quot;</span><br><span class="line">&quot;abc##d######&quot;  &#x3D;&#x3D;&gt;  &quot;&quot;</span><br><span class="line">&quot;#######&quot;       &#x3D;&#x3D;&gt;  &quot;&quot;</span><br><span class="line">&quot;&quot;              &#x3D;&#x3D;&gt;  &quot;&quot;</span><br></pre></td></tr></table></figure>
+
+<p>A:</p>
+<a id="more"></a>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># python</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">clean_string</span>(<span class="params">s</span>):</span></span><br><span class="line">    stack = []</span><br><span class="line">    <span class="keyword">for</span> c <span class="keyword">in</span> s: </span><br><span class="line">        <span class="keyword">if</span> c == <span class="string">&#x27;#&#x27;</span>:</span><br><span class="line">            <span class="keyword">if</span> len(stack) != <span class="number">0</span>:</span><br><span class="line">                stack.pop(len(stack)<span class="number">-1</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            stack.append(c)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;&quot;</span>.join(stack)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Ref1</span></span><br><span class="line"><span class="comment"># def clean_string(string):</span></span><br><span class="line"><span class="comment">#     out = &#x27;&#x27;</span></span><br><span class="line"><span class="comment">#     for x in string:</span></span><br><span class="line"><span class="comment">#         if x != &#x27;#&#x27;: out += x</span></span><br><span class="line"><span class="comment">#         else: out = out[:-1] </span></span><br><span class="line"><span class="comment">#     return out</span></span><br><span class="line">  </span><br><span class="line"><span class="comment"># Ref2  </span></span><br><span class="line"><span class="comment"># def clean_string(s):</span></span><br><span class="line"><span class="comment">#     to_return = &#x27;&#x27;</span></span><br><span class="line"><span class="comment">#     for x in s:</span></span><br><span class="line"><span class="comment">#         to_return = to_return[:-1] if x == &#x27;#&#x27; else to_return+x</span></span><br><span class="line"><span class="comment">#     return to_return  </span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-12-13T14:44:00+08:00"
-              content="2020-12-13">
-          12-13
-        </time>
-      </div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/codewars/" rel="tag"># codewars</a>
+              <a href="/tags/python/" rel="tag"># python</a>
+          </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/12/13/codewars-24-Backspaces-in-string-6-kyu/" itemprop="url">
-            <span itemprop="name">codewars-24: Backspaces in string (6 kyu)</span>
-          </a>
-      </div>
+        
 
-    </header>
-  </article>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-12-05T16:45:00+08:00"
-              content="2020-12-05">
-          12-05
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/12/05/codewars-20-Unpack-delicious-sausages-6-kyu/" itemprop="url">
-            <span itemprop="name">codewars-20: Unpack delicious sausages! (6 kyu)</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-11-28T21:59:00+08:00"
-              content="2020-11-28">
-          11-28
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/11/28/codewars-16-Error-correction-1-Hamming-Code-6-kyu/" itemprop="url">
-            <span itemprop="name">codewars-16: Error correction #1 - Hamming Code (6 kyu)</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-11-21T21:26:00+08:00"
-              content="2020-11-21">
-          11-21
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/11/21/codewars-12-Permutations-4-kyu/" itemprop="url">
-            <span itemprop="name">codewars-12: Permutations (4 kyu)</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-11-16T21:36:00+08:00"
-              content="2020-11-16">
-          11-16
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/11/16/codewars-4-Highest-and-Lowest/" itemprop="url">
-            <span itemprop="name">codewars-4: Highest and Lowest</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-11-10T21:36:00+08:00"
-              content="2020-11-10">
-          11-10
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/11/10/leetcode-4-Move-Zeroes/" itemprop="url">
-            <span itemprop="name">leetcode-4: Move Zeroes</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/12/11/codewars-23-Detect-Pangram-6-kyu/" rel="prev" title="codewars-23: Detect Pangram (6 kyu)">
+      <i class="fa fa-chevron-left"></i> codewars-23: Detect Pangram (6 kyu)
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-  </div>
+      </footer>
+    
+  </article>
   
   
-  
-
   
 
 
