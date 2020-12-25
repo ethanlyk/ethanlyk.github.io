@@ -157,6 +157,88 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/12/05/codewars-20-Unpack-delicious-sausages-6-kyu/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ethanlyk">
+      <meta itemprop="description" content="A place to keep progressing">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EthanLyk's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/12/05/codewars-20-Unpack-delicious-sausages-6-kyu/" class="post-title-link" itemprop="url">codewars-20: Unpack delicious sausages! (6 kyu)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2020-12-05 16:45:00 / 修改時間：16:46:08" itemprop="dateCreated datePublished" datetime="2020-12-05T16:45:00+08:00">2020-12-05</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Q:<br>Unpack delicious sausages!</p>
+<p>A food delivery truck carrying boxes of delicious sausages has arrived and it’s your job to unpack them and put them in the store’s display counter.</p>
+<p>The truck is filled with boxes of goods. Among the goods, there are various types of sausages. Straight sausages I, curvy sausages ), even twirly sausages @ and many more. The safest way to tell any type of sausage apart from other goods is by the packaging [], used exclusively by sausages. Make sure to ignore other goods, those will be taken care of by someone else. Once you have unpacked all the sausages, just lay them out in the display counter (string) in the same order in which they came in boxes with one space “ “ in-between every sausage. Oh, and watch out for spoiled or damaged sausage packs, did I tell you about those? The sausages are always packed in fours and each pack contains only one sausage type, so whenever there is any irregularity, the sausages are probably spoiled or damaged and the whole pack should be thrown out!</p>
+<p>Now we’re getting to the best part - your reward! Instead of money, you’ll be paid in something far better - sausages! Every fifth undamaged processed pack of sausages doesn’t go to the counter, instead it’s yours to keep. Don’t go spending it all at once!</p>
+<p>If the truck arrives completely empty, only with empty boxes or only with goods that are not sausages, the display counter will simply stay empty “”. Unlike truck and boxes that may be empty, every existing product is a non-empty string.<br>Example:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input (truck with 5 boxes containing 11 products):</span><br><span class="line"></span><br><span class="line">[(&quot;(-)&quot;, &quot;[IIII]&quot;, &quot;[))))]&quot;), (&quot;IuI&quot;, &quot;[llll]&quot;), (&quot;[@@@@]&quot;, &quot;UwU&quot;, &quot;[IlII]&quot;), (&quot;IuI&quot;, &quot;[))))]&quot;, &quot;x&quot;), ()]</span><br></pre></td></tr></table></figure>
+<p>“Truck is a list, packages are tuples, boxes are strings”</p>
+<p>Output (four sets of sausages):</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;I I I I ) ) ) ) l l l l @ @ @ @&quot;</span><br></pre></td></tr></table></figure>
+<p>Explanation:</p>
+<ul>
+<li>The last box is empty and is therefore ignored - ()</li>
+<li>Products that are not sausages are ignored - “(-)”, “IuI”, “UwU”, “IuI”, “x”</li>
+<li>One damaged pack got thrown out - “[IlII]”</li>
+<li>Fifth undamaged pack was used as your reward and was therefore excluded from the output: [))))]</li>
+</ul>
+<p>A:</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/12/05/codewars-20-Unpack-delicious-sausages-6-kyu/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/12/05/GCP-3-Create-an-Internal-Load-Balancer/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -915,81 +997,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/11/21/codewars-11-Duplicate-Encoder/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ethanlyk">
-      <meta itemprop="description" content="A place to keep progressing">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="EthanLyk's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/11/21/codewars-11-Duplicate-Encoder/" class="post-title-link" itemprop="url">codewars-11: Duplicate Encoder</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2020-11-21 11:00:00" itemprop="dateCreated datePublished" datetime="2020-11-21T11:00:00+08:00">2020-11-21</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2020-12-05 11:29:36" itemprop="dateModified" datetime="2020-12-05T11:29:36+08:00">2020-12-05</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Q:<br>The goal of this exercise is to convert a string to a new string where each character in the new string is “(“ if that character appears only once in the original string, or “)” if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate.<br>Examples</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&quot;din&quot;      &#x3D;&gt;  &quot;(((&quot;</span><br><span class="line">&quot;recede&quot;   &#x3D;&gt;  &quot;()()()&quot;</span><br><span class="line">&quot;Success&quot;  &#x3D;&gt;  &quot;)())())&quot;</span><br><span class="line">&quot;(( @&quot;     &#x3D;&gt;  &quot;))((&quot; </span><br></pre></td></tr></table></figure>
-
-<p>A:</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/11/21/codewars-11-Duplicate-Encoder/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1059,7 +1066,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">41</span>
+          <span class="site-state-item-count">42</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
