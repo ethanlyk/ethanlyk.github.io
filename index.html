@@ -157,6 +157,83 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/12/27/codewars-31-Reverse-or-rotate-6-kyu/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ethanlyk">
+      <meta itemprop="description" content="A place to keep progressing">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EthanLyk's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/12/27/codewars-31-Reverse-or-rotate-6-kyu/" class="post-title-link" itemprop="url">codewars-31: Reverse or rotate? (6 kyu)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2020-12-27 15:09:00 / 修改時間：15:10:04" itemprop="dateCreated datePublished" datetime="2020-12-27T15:09:00+08:00">2020-12-27</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Q:<br>The input is a string str of digits. Cut the string into chunks (a chunk here is a substring of the initial string) of size sz (ignore the last chunk if its size is less than sz).</p>
+<p>If a chunk represents an integer such as the sum of the cubes of its digits is divisible by 2, reverse that chunk; otherwise rotate it to the left by one position. Put together these modified chunks and return the result as a string.</p>
+<p>If</p>
+<ul>
+<li>sz is &lt;= 0 or if str is empty return “”</li>
+<li>sz is greater (&gt;) than the length of str it is impossible to take a chunk of size sz hence return “”.</li>
+</ul>
+<p>Examples:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">revrot(&quot;123456987654&quot;, 6) --&gt; &quot;234561876549&quot;</span><br><span class="line">revrot(&quot;123456987653&quot;, 6) --&gt; &quot;234561356789&quot;</span><br><span class="line">revrot(&quot;66443875&quot;, 4) --&gt; &quot;44668753&quot;</span><br><span class="line">revrot(&quot;66443875&quot;, 8) --&gt; &quot;64438756&quot;</span><br><span class="line">revrot(&quot;664438769&quot;, 8) --&gt; &quot;67834466&quot;</span><br><span class="line">revrot(&quot;123456779&quot;, 8) --&gt; &quot;23456771&quot;</span><br><span class="line">revrot(&quot;&quot;, 8) --&gt; &quot;&quot;</span><br><span class="line">revrot(&quot;123456779&quot;, 0) --&gt; &quot;&quot; </span><br><span class="line">revrot(&quot;563000655734469485&quot;, 4) --&gt; &quot;0365065073456944&quot;</span><br></pre></td></tr></table></figure>
+
+
+<p>A:</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/12/27/codewars-31-Reverse-or-rotate-6-kyu/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/12/25/codewars-30-String-array-duplicates-6-kyu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -826,78 +903,6 @@ concatenate num and r and return the result</code></pre>
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/12/07/codewars-21-Character-with-longest-consecutive-repetition-6-kyu/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ethanlyk">
-      <meta itemprop="description" content="A place to keep progressing">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="EthanLyk's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/12/07/codewars-21-Character-with-longest-consecutive-repetition-6-kyu/" class="post-title-link" itemprop="url">codewars-21: Character with longest consecutive repetition (6 kyu)</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-              
-
-              <time title="創建時間：2020-12-07 22:08:00 / 修改時間：22:09:13" itemprop="dateCreated datePublished" datetime="2020-12-07T22:08:00+08:00">2020-12-07</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Q:<br>For a given string s find the character c (or C) with longest consecutive repetition and return:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Pair(c, l)</span><br></pre></td></tr></table></figure>
-<p>where l (or L) is the length of the repetition. If there are two or more characters with the same l return the first in order of appearance.</p>
-<p>For empty string return:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Pair(null, 0)</span><br></pre></td></tr></table></figure>
-
-<p>A:</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/12/07/codewars-21-Character-with-longest-consecutive-repetition-6-kyu/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -967,7 +972,7 @@ concatenate num and r and return the result</code></pre>
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">42</span>
+          <span class="site-state-item-count">43</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
