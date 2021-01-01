@@ -20,21 +20,21 @@
     var CONFIG = {"hostname":"ethanlyk.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Q:Let us consider this example (array written in general format): ls &#x3D; [0, 1, 3, 6, 10] Its following parts: 123456ls &#x3D; [0, 1, 3, 6, 10]ls &#x3D; [1, 3, 6, 10]ls &#x3D; [3, 6, 10]ls &#x3D; [6, 10">
+  <meta name="description" content="Q:A traveling salesman has to visit clients. He got each client’s address e.g. “432 Main Long Road St. Louisville OH 43071” as a list. The basic zipcode format usually consists of two capital letters">
 <meta property="og:type" content="article">
-<meta property="og:title" content="codewars-15: Sums of Parts (6 kyu)">
-<meta property="og:url" content="https://ethanlyk.github.io/2020/11/27/codewars-15-Sums-of-Parts-6-kyu/index.html">
+<meta property="og:title" content="codewars-33: Salesman&#39;s Travel (6 kyu)">
+<meta property="og:url" content="https://ethanlyk.github.io/2021/01/01/codewars-33-Salesman-s-Travel-6-kyu/index.html">
 <meta property="og:site_name" content="EthanLyk&#39;s blog">
-<meta property="og:description" content="Q:Let us consider this example (array written in general format): ls &#x3D; [0, 1, 3, 6, 10] Its following parts: 123456ls &#x3D; [0, 1, 3, 6, 10]ls &#x3D; [1, 3, 6, 10]ls &#x3D; [3, 6, 10]ls &#x3D; [6, 10">
+<meta property="og:description" content="Q:A traveling salesman has to visit clients. He got each client’s address e.g. “432 Main Long Road St. Louisville OH 43071” as a list. The basic zipcode format usually consists of two capital letters">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2020-11-27T13:24:00.000Z">
-<meta property="article:modified_time" content="2020-12-05T03:30:17.761Z">
+<meta property="article:published_time" content="2021-01-01T06:25:00.000Z">
+<meta property="article:modified_time" content="2021-01-01T06:26:32.289Z">
 <meta property="article:author" content="ethanlyk">
 <meta property="article:tag" content="codewars">
-<meta property="article:tag" content="js">
+<meta property="article:tag" content="kotlin">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://ethanlyk.github.io/2020/11/27/codewars-15-Sums-of-Parts-6-kyu/">
+<link rel="canonical" href="https://ethanlyk.github.io/2021/01/01/codewars-33-Salesman-s-Travel-6-kyu/">
 
 
 <script id="page-configurations">
@@ -47,7 +47,7 @@
   };
 </script>
 
-  <title>codewars-15: Sums of Parts (6 kyu) | EthanLyk's blog</title>
+  <title>codewars-33: Salesman's Travel (6 kyu) | EthanLyk's blog</title>
   
 
 
@@ -162,7 +162,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/11/27/codewars-15-Sums-of-Parts-6-kyu/">
+    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2021/01/01/codewars-33-Salesman-s-Travel-6-kyu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -175,7 +175,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          codewars-15: Sums of Parts (6 kyu)
+          codewars-33: Salesman's Travel (6 kyu)
         </h1>
 
         <div class="post-meta">
@@ -184,16 +184,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
+              
 
-              <time title="創建時間：2020-11-27 21:24:00" itemprop="dateCreated datePublished" datetime="2020-11-27T21:24:00+08:00">2020-11-27</time>
+              <time title="創建時間：2021-01-01 14:25:00 / 修改時間：14:26:32" itemprop="dateCreated datePublished" datetime="2021-01-01T14:25:00+08:00">2021-01-01</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2020-12-05 11:30:17" itemprop="dateModified" datetime="2020-12-05T11:30:17+08:00">2020-12-05</time>
-              </span>
 
           
 
@@ -206,18 +200,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Q:<br>Let us consider this example (array written in general format):</p>
-<p>ls = [0, 1, 3, 6, 10]</p>
-<p>Its following parts:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ls &#x3D; [0, 1, 3, 6, 10]</span><br><span class="line">ls &#x3D; [1, 3, 6, 10]</span><br><span class="line">ls &#x3D; [3, 6, 10]</span><br><span class="line">ls &#x3D; [6, 10]</span><br><span class="line">ls &#x3D; [10]</span><br><span class="line">ls &#x3D; []</span><br></pre></td></tr></table></figure>
-<p>The corresponding sums are (put together in a list): [20, 20, 19, 16, 10, 0]</p>
-<p>The function parts_sums (or its variants in other languages) will take as parameter a list ls and return a list of the sums of its parts as defined above.</p>
-<p>Other Examples:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ls &#x3D; [1, 2, 3, 4, 5, 6] </span><br><span class="line">parts_sums(ls) -&gt; [21, 20, 18, 15, 11, 6, 0]</span><br><span class="line"></span><br><span class="line">ls &#x3D; [744125, 935, 407, 454, 430, 90, 144, 6710213, 889, 810, 2579358]</span><br><span class="line">parts_sums(ls) -&gt; [10037855, 9293730, 9292795, 9292388, 9291934, 9291504, 9291414, 9291270, 2581057, 2580168, 2579358, 0]</span><br></pre></td></tr></table></figure>
+        <p>Q:<br>A traveling salesman has to visit clients. He got each client’s address e.g. “432 Main Long Road St. Louisville OH 43071” as a list.</p>
+<p>The basic zipcode format usually consists of two capital letters followed by a white space and five digits. The list of clients to visit was given as a string of all addresses, each separated from the others by a comma, e.g. :</p>
+<p>“123 Main Street St. Louisville OH 43071,432 Main Long Road St. Louisville OH 43071,786 High Street Pollocksville NY 56432”.</p>
+<p>To ease his travel he wants to group the list by zipcode.<br>Task</p>
+<p>The function travel will take two parameters r (addresses’ list of all clients’ as a string) and zipcode and returns a string in the following format:</p>
+<p>zipcode:street and town,street and town,…/house number,house number,…</p>
+<p>The street numbers must be in the same order as the streets where they belong.</p>
+<p>If a given zipcode doesn’t exist in the list of clients’ addresses return “zipcode:/“<br>Examples</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">r &#x3D; &quot;123 Main Street St. Louisville OH 43071,432 Main Long Road St. Louisville OH 43071,786 High Street Pollocksville NY 56432&quot;</span><br><span class="line"></span><br><span class="line">travel(r, &quot;OH 43071&quot;) --&gt; &quot;OH 43071:Main Street St. Louisville,Main Long Road St. Louisville&#x2F;123,432&quot;</span><br><span class="line"></span><br><span class="line">travel(r, &quot;NY 56432&quot;) --&gt; &quot;NY 56432:High Street Pollocksville&#x2F;786&quot;</span><br></pre></td></tr></table></figure>
 
 <p>A:</p>
 <a id="more"></a>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// js</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">partsSums</span>(<span class="params">ls</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> sum = []</span><br><span class="line">    <span class="keyword">let</span> bak = []</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">let</span> calcSum = ls.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">acc, cur</span>) </span>&#123;</span><br><span class="line">        bak.push(cur)</span><br><span class="line">        <span class="keyword">return</span> acc + cur</span><br><span class="line">    &#125;, <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> len = ls.length</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">        sum.push(calcSum)</span><br><span class="line">        </span><br><span class="line">        calcSum -= bak[i]</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    sum.push(<span class="number">0</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> sum</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Ref</span></span><br><span class="line"><span class="comment">function partsSums(ls) &#123;</span></span><br><span class="line"><span class="comment">    ls.unshift(0);</span></span><br><span class="line"><span class="comment">    let sum = ls.reduce((p, c) =&gt; p + c, 0);</span></span><br><span class="line"><span class="comment">    return ls.map(v =&gt; sum = sum - v);</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// kotlin</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">travel</span><span class="params">(r:<span class="type">String</span>, zipcode:<span class="type">String</span>)</span></span>:String &#123;</span><br><span class="line">    <span class="keyword">val</span> v = r.split(<span class="string">&quot;,&quot;</span>)</span><br><span class="line">    	.map &#123; it.trim().split(<span class="string">&quot; &quot;</span>) &#125;</span><br><span class="line">        .map &#123; <span class="string">&quot;<span class="subst">$&#123;it[it.size<span class="number">-2</span>]&#125;</span> <span class="subst">$&#123;it[it.size<span class="number">-1</span>]&#125;</span>:<span class="subst">$&#123;it.slice(<span class="number">1.</span>.it.size<span class="number">-3</span>).joinToString(<span class="string">&quot; &quot;</span>)&#125;</span>:<span class="subst">$&#123;it[<span class="number">0</span>]&#125;</span>&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> strRet = zipcode + <span class="string">&quot;:&quot;</span></span><br><span class="line">    <span class="keyword">var</span> ayNum = arrayListOf&lt;String&gt;()</span><br><span class="line">    v.forEach(&#123;</span><br><span class="line">        <span class="keyword">val</span> ay = it.split(<span class="string">&quot;:&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> (ay.first() == zipcode) &#123;</span><br><span class="line">            strRet += (ay[<span class="number">1</span>] + <span class="string">&quot;,&quot;</span>)</span><br><span class="line">            ayNum.add(ay.last())</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (ayNum.size != <span class="number">0</span>) &#123;</span><br><span class="line">        strRet = strRet.dropLast(<span class="number">1</span>)</span><br><span class="line">        strRet += <span class="string">&quot;/&quot;</span></span><br><span class="line">        strRet += ayNum.joinToString(<span class="string">&quot;,&quot;</span>)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        strRet += <span class="string">&quot;/&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> strRet    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Ref</span></span><br><span class="line"><span class="comment">// fun travel(r:String, zipcode:String):String &#123;</span></span><br><span class="line"><span class="comment">//     if(zipcode.isEmpty())&#123;</span></span><br><span class="line"><span class="comment">//       return &quot;:/&quot;</span></span><br><span class="line"><span class="comment">//     &#125;</span></span><br><span class="line"><span class="comment">//     var matches = r.split(&quot;,&quot;).filter&#123;it.endsWith(zipcode)&#125;.map &#123; it.replace(&quot; $zipcode&quot;, &quot;&quot;) &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//     val numbers = matches.map &#123; it.substringBefore(&quot; &quot;) &#125;.joinToString(&quot;,&quot;)</span></span><br><span class="line"><span class="comment">//     val streets = matches.map &#123; it.substringAfter(&quot; &quot;) &#125;.joinToString(&quot;,&quot;)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//     return &quot;$zipcode:$streets/$numbers&quot;</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -227,7 +222,7 @@
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/codewars/" rel="tag"># codewars</a>
-              <a href="/tags/js/" rel="tag"># js</a>
+              <a href="/tags/kotlin/" rel="tag"># kotlin</a>
           </div>
 
         
@@ -236,13 +231,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/11/25/codewars-14-Address-Book-by-State-6-kyu/" rel="prev" title="codewars-14: Address Book by State (6 kyu )">
-      <i class="fa fa-chevron-left"></i> codewars-14: Address Book by State (6 kyu )
+    <a href="/2020/12/30/codewars-32-Sort-the-odd-6-kyu/" rel="prev" title="codewars-32: Sort the odd (6 kyu)">
+      <i class="fa fa-chevron-left"></i> codewars-32: Sort the odd (6 kyu)
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/11/28/codewars-16-Error-correction-1-Hamming-Code-6-kyu/" rel="next" title="codewars-16: Error correction #1 - Hamming Code (6 kyu)">
-      codewars-16: Error correction #1 - Hamming Code (6 kyu) <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     

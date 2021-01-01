@@ -157,6 +157,82 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2021/01/01/codewars-33-Salesman-s-Travel-6-kyu/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ethanlyk">
+      <meta itemprop="description" content="A place to keep progressing">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EthanLyk's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/01/codewars-33-Salesman-s-Travel-6-kyu/" class="post-title-link" itemprop="url">codewars-33: Salesman's Travel (6 kyu)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2021-01-01 14:25:00 / 修改時間：14:26:32" itemprop="dateCreated datePublished" datetime="2021-01-01T14:25:00+08:00">2021-01-01</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Q:<br>A traveling salesman has to visit clients. He got each client’s address e.g. “432 Main Long Road St. Louisville OH 43071” as a list.</p>
+<p>The basic zipcode format usually consists of two capital letters followed by a white space and five digits. The list of clients to visit was given as a string of all addresses, each separated from the others by a comma, e.g. :</p>
+<p>“123 Main Street St. Louisville OH 43071,432 Main Long Road St. Louisville OH 43071,786 High Street Pollocksville NY 56432”.</p>
+<p>To ease his travel he wants to group the list by zipcode.<br>Task</p>
+<p>The function travel will take two parameters r (addresses’ list of all clients’ as a string) and zipcode and returns a string in the following format:</p>
+<p>zipcode:street and town,street and town,…/house number,house number,…</p>
+<p>The street numbers must be in the same order as the streets where they belong.</p>
+<p>If a given zipcode doesn’t exist in the list of clients’ addresses return “zipcode:/“<br>Examples</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">r &#x3D; &quot;123 Main Street St. Louisville OH 43071,432 Main Long Road St. Louisville OH 43071,786 High Street Pollocksville NY 56432&quot;</span><br><span class="line"></span><br><span class="line">travel(r, &quot;OH 43071&quot;) --&gt; &quot;OH 43071:Main Street St. Louisville,Main Long Road St. Louisville&#x2F;123,432&quot;</span><br><span class="line"></span><br><span class="line">travel(r, &quot;NY 56432&quot;) --&gt; &quot;NY 56432:High Street Pollocksville&#x2F;786&quot;</span><br></pre></td></tr></table></figure>
+
+<p>A:</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/01/01/codewars-33-Salesman-s-Travel-6-kyu/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/12/30/codewars-32-Sort-the-odd-6-kyu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -400,10 +476,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2020-12-23 22:28:00 / 修改時間：22:29:10" itemprop="dateCreated datePublished" datetime="2020-12-23T22:28:00+08:00">2020-12-23</time>
+              <time title="創建時間：2020-12-23 22:28:00" itemprop="dateCreated datePublished" datetime="2020-12-23T22:28:00+08:00">2020-12-23</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2021-01-01 10:05:10" itemprop="dateModified" datetime="2021-01-01T10:05:10+08:00">2021-01-01</time>
+              </span>
 
           
 
@@ -834,74 +916,6 @@ concatenate num and r and return the result</code></pre>
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/12/11/codewars-23-Detect-Pangram-6-kyu/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ethanlyk">
-      <meta itemprop="description" content="A place to keep progressing">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="EthanLyk's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/12/11/codewars-23-Detect-Pangram-6-kyu/" class="post-title-link" itemprop="url">codewars-23: Detect Pangram (6 kyu)</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-              
-
-              <time title="創建時間：2020-12-11 20:32:00 / 修改時間：20:32:27" itemprop="dateCreated datePublished" datetime="2020-12-11T20:32:00+08:00">2020-12-11</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Q:<br>A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence “The quick brown fox jumps over the lazy dog” is a pangram, because it uses the letters A-Z at least once (case is irrelevant).</p>
-<p>Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.</p>
-<p>A:</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/12/11/codewars-23-Detect-Pangram-6-kyu/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -971,7 +985,7 @@ concatenate num and r and return the result</code></pre>
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">44</span>
+          <span class="site-state-item-count">45</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -1010,7 +1024,7 @@ concatenate num and r and return the result</code></pre>
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
