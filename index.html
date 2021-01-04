@@ -157,6 +157,78 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2021/01/04/codewars-35-Dictionary-Merge-6-kyu/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ethanlyk">
+      <meta itemprop="description" content="A place to keep progressing">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EthanLyk's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/04/codewars-35-Dictionary-Merge-6-kyu/" class="post-title-link" itemprop="url">codewars-35: Dictionary Merge (6 kyu)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2021-01-04 22:53:00 / 修改時間：22:53:40" itemprop="dateCreated datePublished" datetime="2021-01-04T22:53:00+08:00">2021-01-04</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Q:<br>Your task is to implement a function that takes one or more dictionaries and combines them in one result dictionary.</p>
+<p>The keys in the given dictionaries can overlap. In that case you should combine all source values in an array. Duplicate values should be preserved.</p>
+<p>Here is an example:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let source1 &#x3D; [&quot;A&quot;: 1, &quot;B&quot;: 2]</span><br><span class="line">let source2 &#x3D; [&quot;A&quot;: 3]</span><br><span class="line"></span><br><span class="line">let result &#x3D; merge([source1, source2])</span><br><span class="line">&#x2F;&#x2F; result should have this content: [&quot;A&quot;: [1, 3], &quot;B&quot;: [2]]</span><br></pre></td></tr></table></figure>
+
+
+<p>A:</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/01/04/codewars-35-Dictionary-Merge-6-kyu/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2021/01/02/codewars-34-Function-iteration-6-kyu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -827,97 +899,6 @@ concatenate num and r and return the result</code></pre>
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/12/14/codewars-25/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ethanlyk">
-      <meta itemprop="description" content="A place to keep progressing">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="EthanLyk's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/12/14/codewars-25/" class="post-title-link" itemprop="url">codewars-25: Binaries (6 kyu)</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2020-12-14 22:14:00" itemprop="dateCreated datePublished" datetime="2020-12-14T22:14:00+08:00">2020-12-14</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2020-12-15 22:46:17" itemprop="dateModified" datetime="2020-12-15T22:46:17+08:00">2020-12-15</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Q:<br>Let us take a string composed of decimal digits: “10111213”. We want to code this string as a string of 0 and 1 and after that be able to decode it.</p>
-<p>To code we decompose the given string in its decimal digits (in the above example: 1 0 1 1 1 2 1 3) and we will code each digit.<br>Coding process to code a number n expressed in base 10:</p>
-<p>For each digit d of n</p>
-<ul>
-<li>a) Let k be the number of bits of d</li>
-<li>b) Write k-1 times the digit 0 followed by the digit 1</li>
-<li>c) Write digit d as a binary string, with the rightmost bit being the least significant</li>
-<li>d) Concat the result of b) and c) to get the coding of d</li>
-</ul>
-<p>At last concatenate all the results got for the digits of n.<br>An example</p>
-<p>So we code 0 as 10, 1 as 11, 2 as 0110, 3 as 0111 … etc…</p>
-<p>With the given process, the initial string “10111213” becomes: “11101111110110110111” resulting of concatenation of 11 10 11 11 11 0110 11 0111.<br>Task:</p>
-<ul>
-<li>Given strng a string of digits representing a decimal number the function code(strng) should return the coding of strng as explained above.</li>
-<li>Given a string strng resulting from the previous coding, decode it to get the corresponding decimal string.</li>
-</ul>
-<p>Examples:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">code(&quot;77338855&quot;) --&gt; &quot;001111001111011101110001100000011000001101001101&quot;</span><br><span class="line">code(&quot;77338&quot;)  --&gt; &quot;0011110011110111011100011000&quot;</span><br><span class="line">code(&quot;0011121314&quot;) --&gt; &quot;1010111111011011011111001100&quot;</span><br><span class="line"></span><br><span class="line">decode(&quot;001111001111011101110001100000011000001101001101&quot;) -&gt; &quot;77338855&quot;</span><br><span class="line">decode(&quot;0011110011110111011100011000&quot;) -&gt; &quot;77338&quot;</span><br><span class="line">decode(&quot;1010111111011011011111001100&quot;) -&gt; &quot;0011121314&quot;</span><br></pre></td></tr></table></figure>
-
-<p>A:</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/12/14/codewars-25/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -987,7 +968,7 @@ concatenate num and r and return the result</code></pre>
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">46</span>
+          <span class="site-state-item-count">47</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
