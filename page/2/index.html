@@ -157,6 +157,86 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/12/19/codewars-27-Reversing-a-Process-6-kyu/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ethanlyk">
+      <meta itemprop="description" content="A place to keep progressing">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EthanLyk's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/12/19/codewars-27-Reversing-a-Process-6-kyu/" class="post-title-link" itemprop="url">codewars-27: Reversing a Process (6 kyu)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2020-12-19 22:33:00 / 修改時間：22:33:52" itemprop="dateCreated datePublished" datetime="2020-12-19T22:33:00+08:00">2020-12-19</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Q:<br>Suppose we know the process by which a string s was encoded to a string r (see explanation below). The aim of the kata is to decode this string r to get back the original string s.<br>Explanation of the encoding process:</p>
+<pre><code>input: a string s composed of lowercase letters from &quot;a&quot; to &quot;z&quot;, and a positive integer num
+we know there is a correspondence between abcde...uvwxyzand 0, 1, 2 ..., 23, 24, 25 : 0 &lt;-&gt; a, 1 &lt;-&gt; b ...
+if c is a character of s whose corresponding number is x, apply to x the function f: x-&gt; f(x) = num * x % 26, then find ch the corresponding character of f(x)
+Accumulate all these ch in a string r
+concatenate num and r and return the result</code></pre>
+<p>For example:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">encode(&quot;mer&quot;, 6015)  --&gt;  &quot;6015ekx&quot;</span><br><span class="line"></span><br><span class="line">m --&gt; 12,   12 * 6015 % 26 &#x3D; 4,    4  --&gt; e</span><br><span class="line">e --&gt; 4,     4 * 6015 % 26 &#x3D; 10,   10 --&gt; k</span><br><span class="line">r --&gt; 17,   17 * 6015 % 26 &#x3D; 23,   23 --&gt; x</span><br></pre></td></tr></table></figure>
+<p>So we get “ekx”, hence the output is “6015ekx”</p>
+<p>Task</p>
+<p>A string s was encoded to string r by the above process. complete the function to get back s whenever it is possible.</p>
+<p>Indeed it can happen that the decoding is impossible for strings composed of whatever letters from “a” to “z” when positive integer num has not been correctly chosen. In that case return “Impossible to decode”.<br>Examples</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">decode &quot;6015ekx&quot; -&gt; &quot;mer&quot;</span><br><span class="line">decode &quot;5057aan&quot; -&gt; &quot;Impossible to decode&quot;</span><br></pre></td></tr></table></figure>
+
+<p>A:</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/12/19/codewars-27-Reversing-a-Process-6-kyu/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/12/17/codewars-26-Help-the-bookseller-6-kyu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -853,82 +933,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/12/03/codewars-18-Simple-string-indices-6-kyu/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ethanlyk">
-      <meta itemprop="description" content="A place to keep progressing">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="EthanLyk's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/12/03/codewars-18-Simple-string-indices-6-kyu/" class="post-title-link" itemprop="url">codewars-18: Simple string indices (6 kyu)</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2020-12-03 22:22:00" itemprop="dateCreated datePublished" datetime="2020-12-03T22:22:00+08:00">2020-12-03</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2020-12-05 11:30:46" itemprop="dateModified" datetime="2020-12-05T11:30:46+08:00">2020-12-05</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Q:<br>In this Kata, you will be given a string with brackets and an index of an opening bracket and your task will be to return the index of the matching closing bracket. Both the input and returned index are 0-based except in Fortran where it is 1-based. An opening brace will always have a closing brace. Return -1 if there is no answer (in Haskell, return Nothing; in Fortran, return 0; in Go, return an error)</p>
-<p>Examples</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">solve(&quot;((1)23(45))(aB)&quot;, 0) &#x3D; 10 &#x2F;&#x2F; the opening brace at index 0 matches the closing brace at index 10</span><br><span class="line">solve(&quot;((1)23(45))(aB)&quot;, 1) &#x3D; 3 </span><br><span class="line">solve(&quot;((1)23(45))(aB)&quot;, 2) &#x3D; -1 &#x2F;&#x2F; there is no opening bracket at index 2, so return -1</span><br><span class="line">solve(&quot;((1)23(45))(aB)&quot;, 6) &#x3D; 9</span><br><span class="line">solve(&quot;((1)23(45))(aB)&quot;, 11) &#x3D; 14</span><br><span class="line">solve(&quot;((&gt;)|?(*&#39;))(yZ)&quot;, 11) &#x3D; 14</span><br></pre></td></tr></table></figure>
-
-<p>A:</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/12/03/codewars-18-Simple-string-indices-6-kyu/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -998,7 +1002,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">48</span>
+          <span class="site-state-item-count">49</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
