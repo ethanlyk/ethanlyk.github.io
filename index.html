@@ -157,6 +157,87 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2021/01/17/codewars-39-Are-they-the-same-6-kyu/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ethanlyk">
+      <meta itemprop="description" content="A place to keep progressing">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EthanLyk's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/17/codewars-39-Are-they-the-same-6-kyu/" class="post-title-link" itemprop="url">codewars-39: Are they the same? (6 kyu)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2021-01-17 09:48:00 / 修改時間：14:06:25" itemprop="dateCreated datePublished" datetime="2021-01-17T09:48:00+08:00">2021-01-17</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Q:<br>Given two arrays a and b write a function comp(a, b) (compSame(a, b) in Clojure) that checks whether the two arrays have the “same” elements, with the same multiplicities. “Same” means, here, that the elements in b are the elements in a squared, regardless of the order.<br>Examples<br>Valid arrays</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; [121, 144, 19, 161, 19, 144, 19, 11]  </span><br><span class="line">b &#x3D; [121, 14641, 20736, 361, 25921, 361, 20736, 361]</span><br></pre></td></tr></table></figure>
+<p>comp(a, b) returns true because in b 121 is the square of 11, 14641 is the square of 121, 20736 the square of 144, 361 the square of 19, 25921 the square of 161, and so on. It gets obvious if we write b’s elements in terms of squares:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; [121, 144, 19, 161, 19, 144, 19, 11] </span><br><span class="line">b &#x3D; [11*11, 121*121, 144*144, 19*19, 161*161, 19*19, 144*144, 19*19]</span><br></pre></td></tr></table></figure>
+<p>Invalid arrays</p>
+<p>If we change the first number to something else, comp may not return true anymore:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; [121, 144, 19, 161, 19, 144, 19, 11]  </span><br><span class="line">b &#x3D; [132, 14641, 20736, 361, 25921, 361, 20736, 361]</span><br></pre></td></tr></table></figure>
+<p>comp(a,b) returns false because in b 132 is not the square of any number of a.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; [121, 144, 19, 161, 19, 144, 19, 11]  </span><br><span class="line">b &#x3D; [121, 14641, 20736, 36100, 25921, 361, 20736, 361]</span><br></pre></td></tr></table></figure>
+<p>comp(a,b) returns false because in b 36100 is not the square of any number of a.<br>Remarks</p>
+<ul>
+<li>a or b might be [] (all languages except R, Shell).</li>
+<li>a or b might be nil or null or None or nothing (except in C++, Elixir, Haskell, PureScript, Pascal, R, Rust, Shell).</li>
+</ul>
+<p>If a or b are nil (or null or None), the problem doesn’t make sense so return false.</p>
+<p>A:</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/01/17/codewars-39-Are-they-the-same-6-kyu/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2021/01/13/codewars-38-Circularly-Sorted-Array-6-kyu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -822,89 +903,10 @@ the first letter is replaced by its character code (e.g. H becomes 72)</code></p
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/12/23/codewars-29-Sum-consecutives-6-kyu/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ethanlyk">
-      <meta itemprop="description" content="A place to keep progressing">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="EthanLyk's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/12/23/codewars-29-Sum-consecutives-6-kyu/" class="post-title-link" itemprop="url">codewars-29: Sum consecutives (6 kyu)</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2020-12-23 22:28:00" itemprop="dateCreated datePublished" datetime="2020-12-23T22:28:00+08:00">2020-12-23</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2021-01-01 10:05:10" itemprop="dateModified" datetime="2021-01-01T10:05:10+08:00">2021-01-01</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Q:<br>You are given a list/array which contains only integers (positive and negative). Your job is to sum only the numbers that are the same and consecutive. The result should be one list.</p>
-<p>Extra credit if you solve it in one line. You can assume there is never an empty list/array and there will always be an integer.</p>
-<p>Same meaning: 1 == 1</p>
-<p>1 != -1</p>
-<p>#Examples:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[1,4,4,4,0,4,3,3,1] # should return [1,12,0,4,6,1]</span><br><span class="line"></span><br><span class="line">&quot;&quot;&quot;So as you can see sum of consecutives 1 is 1 </span><br><span class="line">sum of 3 consecutives 4 is 12 </span><br><span class="line">sum of 0... and sum of 2 </span><br><span class="line">consecutives 3 is 6 ...&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">[1,1,7,7,3] # should return [2,14,3]</span><br><span class="line">[-5,-5,7,7,12,0] # should return [-10,14,12,0]</span><br></pre></td></tr></table></figure>
-
-<p>A:</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/12/23/codewars-29-Sum-consecutives-6-kyu/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一頁"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一頁"></i></a>
   </nav>
 
 
@@ -970,7 +972,7 @@ the first letter is replaced by its character code (e.g. H becomes 72)</code></p
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">50</span>
+          <span class="site-state-item-count">51</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
