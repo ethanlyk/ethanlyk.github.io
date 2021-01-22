@@ -157,6 +157,82 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/11/13/codewars-2-Morse-code-1-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ethanlyk">
+      <meta itemprop="description" content="A place to keep progressing">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EthanLyk's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/13/codewars-2-Morse-code-1-3/" class="post-title-link" itemprop="url">codewars-2: Morse code (1/3)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2020-11-13 19:38:00" itemprop="dateCreated datePublished" datetime="2020-11-13T19:38:00+08:00">2020-11-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2020-12-05 11:28:18" itemprop="dateModified" datetime="2020-12-05T11:28:18+08:00">2020-12-05</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Q: The Morse code encodes every character as a sequence of “dots” and “dashes”. Your task is to implement a function that would take the morse code as input and return a decoded human-readable string. </p>
+<p>For example:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">decodeMorse(&#39;.... . -.--   .--- ..- -.. .&#39;)</span><br><span class="line">&#x2F;&#x2F;should return &quot;HEY JUDE&quot;</span><br></pre></td></tr></table></figure>
+<p>Kotlin: MorseCode[“.–”] ?: “” or MorseCode.getOrDefault(“.–”, “”)</p>
+<p>A:</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/11/13/codewars-2-Morse-code-1-3/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/11/11/codewars-1-Convert-string-to-camel-case/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -926,94 +1002,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/10/03/android-service/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ethanlyk">
-      <meta itemprop="description" content="A place to keep progressing">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="EthanLyk's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/10/03/android-service/" class="post-title-link" itemprop="url">Android-1: Service</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2020-10-03 16:40:27" itemprop="dateCreated datePublished" datetime="2020-10-03T16:40:27+08:00">2020-10-03</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2020-10-11 16:50:36" itemprop="dateModified" datetime="2020-10-11T16:50:36+08:00">2020-10-11</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h5 id="使用時機"><a href="#使用時機" class="headerlink" title="使用時機"></a>使用時機</h5><ul>
-<li>當有需要在背景執行動作時，可使用 service</li>
-<li>Service 啟動有 2 種作法<ul>
-<li>若 Activity 有與 Service 做資料通訊，可使用 bindService()</li>
-<li>若 Activity 無須與 Service 做資料通訊，可使用 startService()</li>
-</ul>
-</li>
-</ul>
-<h5 id="Service-由-Activity-啟動時的執行順序"><a href="#Service-由-Activity-啟動時的執行順序" class="headerlink" title="Service 由 Activity 啟動時的執行順序"></a>Service 由 Activity 啟動時的執行順序</h5><ol>
-<li>MainActivity::bindService() </li>
-<li>Service::onCreate() -&gt; Service::onBind() </li>
-<li>MainActivity::onServiceConnected</li>
-<li>…</li>
-<li>MainActivity::unbindService()</li>
-<li>Service::onUnbind() -&gt; Service::onDestroy()</li>
-</ol>
-<h5 id="Sample-Code"><a href="#Sample-Code" class="headerlink" title="Sample Code"></a>Sample Code</h5>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/10/03/android-service/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1083,7 +1071,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">51</span>
+          <span class="site-state-item-count">52</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
