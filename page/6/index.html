@@ -157,6 +157,88 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/10/10/android-2-fragment/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ethanlyk">
+      <meta itemprop="description" content="A place to keep progressing">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EthanLyk's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/10/android-2-fragment/" class="post-title-link" itemprop="url">android-2: fragment</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2020-10-10 12:42:41" itemprop="dateCreated datePublished" datetime="2020-10-10T12:42:41+08:00">2020-10-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2020-12-05 11:24:30" itemprop="dateModified" datetime="2020-12-05T11:24:30+08:00">2020-12-05</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h5 id="使用時機"><a href="#使用時機" class="headerlink" title="使用時機"></a>使用時機</h5><ul>
+<li>可以將 fragment 想成是 Activity 的模組化區段，fragment 擁有自己的生命週期、接收自己的輸入事件，而且可以在 Activity 執行時新增或移除片段</li>
+<li>fragment 必須一律嵌入 Activity 中，而主要 Activity 的生命週期會直接影響片段的生命週期</li>
+<li>fragment 生命週期 <img src="https://developer.android.com/images/fragment_lifecycle.png?hl=zh-tw" alt="life cycle"></li>
+<li>fragment 使用方式<ul>
+<li>replace()： 每次切換 fragment 重新使用 replace() 方法的時候，fragment 的 lifecycle 會重頭開始跑</li>
+<li>add() + show() + hide()：設計上切換 fragment 頁面，不適合fragment 的 lifecycle 會重頭開始跑</li>
+</ul>
+</li>
+</ul>
+<h5 id="Sample-code"><a href="#Sample-code" class="headerlink" title="Sample code"></a>Sample code</h5>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/10/10/android-2-fragment/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/10/03/android-service/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -397,7 +479,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-count">53</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>

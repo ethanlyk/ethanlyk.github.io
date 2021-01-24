@@ -157,6 +157,81 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2021/01/24/codewars-41-Message-Validator-6-kyu/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ethanlyk">
+      <meta itemprop="description" content="A place to keep progressing">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EthanLyk's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/24/codewars-41-Message-Validator-6-kyu/" class="post-title-link" itemprop="url">codewars-41: Message Validator (6 kyu)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2021-01-24 17:07:00 / 修改時間：17:10:32" itemprop="dateCreated datePublished" datetime="2021-01-24T17:07:00+08:00">2021-01-24</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Q:<br>In this kata, you have an input string and you should check whether it is a valid message. To decide that, you need to split the string by the numbers, and then compare the numbers with the number of characters in the following substring.</p>
+<p>For example “3hey5hello2hi” should be split into 3, hey, 5, hello, 2, hi and the function should return true, because “hey” is 3 characters, “hello” is 5, and “hi” is 2; as the numbers and the character counts match, the result is true.</p>
+<p>Notes:</p>
+<ul>
+<li>Messages are composed of only letters and digits</li>
+<li>Numbers may have multiple digits: e.g. “4code13hellocodewars” is a valid message</li>
+<li>Every number must match the number of character in the following substring, otherwise the message is invalid: e.g. “hello5” and “2hi2” are invalid</li>
+<li>If the message is an empty string, you should return true</li>
+</ul>
+<p>A:</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/01/24/codewars-41-Message-Validator-6-kyu/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2021/01/22/codewars-40-Your-order-please-6-kyu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -823,83 +898,6 @@ the first letter is replaced by its character code (e.g. H becomes 72)</code></p
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2020/12/27/codewars-31-Reverse-or-rotate-6-kyu/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ethanlyk">
-      <meta itemprop="description" content="A place to keep progressing">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="EthanLyk's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/12/27/codewars-31-Reverse-or-rotate-6-kyu/" class="post-title-link" itemprop="url">codewars-31: Reverse or rotate? (6 kyu)</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-              
-
-              <time title="創建時間：2020-12-27 15:09:00 / 修改時間：15:10:04" itemprop="dateCreated datePublished" datetime="2020-12-27T15:09:00+08:00">2020-12-27</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Q:<br>The input is a string str of digits. Cut the string into chunks (a chunk here is a substring of the initial string) of size sz (ignore the last chunk if its size is less than sz).</p>
-<p>If a chunk represents an integer such as the sum of the cubes of its digits is divisible by 2, reverse that chunk; otherwise rotate it to the left by one position. Put together these modified chunks and return the result as a string.</p>
-<p>If</p>
-<ul>
-<li>sz is &lt;= 0 or if str is empty return “”</li>
-<li>sz is greater (&gt;) than the length of str it is impossible to take a chunk of size sz hence return “”.</li>
-</ul>
-<p>Examples:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">revrot(&quot;123456987654&quot;, 6) --&gt; &quot;234561876549&quot;</span><br><span class="line">revrot(&quot;123456987653&quot;, 6) --&gt; &quot;234561356789&quot;</span><br><span class="line">revrot(&quot;66443875&quot;, 4) --&gt; &quot;44668753&quot;</span><br><span class="line">revrot(&quot;66443875&quot;, 8) --&gt; &quot;64438756&quot;</span><br><span class="line">revrot(&quot;664438769&quot;, 8) --&gt; &quot;67834466&quot;</span><br><span class="line">revrot(&quot;123456779&quot;, 8) --&gt; &quot;23456771&quot;</span><br><span class="line">revrot(&quot;&quot;, 8) --&gt; &quot;&quot;</span><br><span class="line">revrot(&quot;123456779&quot;, 0) --&gt; &quot;&quot; </span><br><span class="line">revrot(&quot;563000655734469485&quot;, 4) --&gt; &quot;0365065073456944&quot;</span><br></pre></td></tr></table></figure>
-
-
-<p>A:</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/12/27/codewars-31-Reverse-or-rotate-6-kyu/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -969,7 +967,7 @@ the first letter is replaced by its character code (e.g. H becomes 72)</code></p
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-count">53</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
