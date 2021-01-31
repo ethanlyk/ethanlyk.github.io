@@ -157,6 +157,76 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2021/01/31/codewars-43-Consecutive-strings-6-kyu/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ethanlyk">
+      <meta itemprop="description" content="A place to keep progressing">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EthanLyk's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/31/codewars-43-Consecutive-strings-6-kyu/" class="post-title-link" itemprop="url">codewars-43: Consecutive strings (6 kyu)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2021-01-31 21:09:00 / 修改時間：21:10:39" itemprop="dateCreated datePublished" datetime="2021-01-31T21:09:00+08:00">2021-01-31</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Q:<br>You are given an array(list) strarr of strings and an integer k. Your task is to return the first longest string consisting of k consecutive strings taken in the array.<br>Examples:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">strarr &#x3D; [&quot;tree&quot;, &quot;foling&quot;, &quot;trashy&quot;, &quot;blue&quot;, &quot;abcdef&quot;, &quot;uvwxyz&quot;], k &#x3D; 2</span><br><span class="line"></span><br><span class="line">Concatenate the consecutive strings of strarr by 2, we get:</span><br><span class="line"></span><br><span class="line">treefoling   (length 10)  concatenation of strarr[0] and strarr[1]</span><br><span class="line">folingtrashy (&quot;      12)  concatenation of strarr[1] and strarr[2]</span><br><span class="line">trashyblue   (&quot;      10)  concatenation of strarr[2] and strarr[3]</span><br><span class="line">blueabcdef   (&quot;      10)  concatenation of strarr[3] and strarr[4]</span><br><span class="line">abcdefuvwxyz (&quot;      12)  concatenation of strarr[4] and strarr[5]</span><br><span class="line"></span><br><span class="line">Two strings are the longest: &quot;folingtrashy&quot; and &quot;abcdefuvwxyz&quot;.</span><br><span class="line">The first that came is &quot;folingtrashy&quot; so </span><br><span class="line">longest_consec(strarr, 2) should return &quot;folingtrashy&quot;.</span><br><span class="line"></span><br><span class="line">In the same way:</span><br><span class="line">longest_consec([&quot;zone&quot;, &quot;abigail&quot;, &quot;theta&quot;, &quot;form&quot;, &quot;libe&quot;, &quot;zas&quot;, &quot;theta&quot;, &quot;abigail&quot;], 2) --&gt; &quot;abigailtheta&quot;</span><br></pre></td></tr></table></figure>
+<p>n being the length of the string array, if n = 0 or k &gt; n or k &lt;= 0 return “”.<br>Note</p>
+<p>consecutive strings : follow one after another without an interruption</p>
+<p>A:</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/01/31/codewars-43-Consecutive-strings-6-kyu/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2021/01/27/codewars-42-Encrypt-this-6-kyu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -833,82 +903,6 @@ the first letter is replaced by its character code (e.g. H becomes 72)</code></p
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2021/01/01/codewars-33-Salesman-s-Travel-6-kyu/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ethanlyk">
-      <meta itemprop="description" content="A place to keep progressing">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="EthanLyk's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/01/codewars-33-Salesman-s-Travel-6-kyu/" class="post-title-link" itemprop="url">codewars-33: Salesman's Travel (6 kyu)</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-              
-
-              <time title="創建時間：2021-01-01 14:25:00 / 修改時間：14:26:32" itemprop="dateCreated datePublished" datetime="2021-01-01T14:25:00+08:00">2021-01-01</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Q:<br>A traveling salesman has to visit clients. He got each client’s address e.g. “432 Main Long Road St. Louisville OH 43071” as a list.</p>
-<p>The basic zipcode format usually consists of two capital letters followed by a white space and five digits. The list of clients to visit was given as a string of all addresses, each separated from the others by a comma, e.g. :</p>
-<p>“123 Main Street St. Louisville OH 43071,432 Main Long Road St. Louisville OH 43071,786 High Street Pollocksville NY 56432”.</p>
-<p>To ease his travel he wants to group the list by zipcode.<br>Task</p>
-<p>The function travel will take two parameters r (addresses’ list of all clients’ as a string) and zipcode and returns a string in the following format:</p>
-<p>zipcode:street and town,street and town,…/house number,house number,…</p>
-<p>The street numbers must be in the same order as the streets where they belong.</p>
-<p>If a given zipcode doesn’t exist in the list of clients’ addresses return “zipcode:/“<br>Examples</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">r &#x3D; &quot;123 Main Street St. Louisville OH 43071,432 Main Long Road St. Louisville OH 43071,786 High Street Pollocksville NY 56432&quot;</span><br><span class="line"></span><br><span class="line">travel(r, &quot;OH 43071&quot;) --&gt; &quot;OH 43071:Main Street St. Louisville,Main Long Road St. Louisville&#x2F;123,432&quot;</span><br><span class="line"></span><br><span class="line">travel(r, &quot;NY 56432&quot;) --&gt; &quot;NY 56432:High Street Pollocksville&#x2F;786&quot;</span><br></pre></td></tr></table></figure>
-
-<p>A:</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/01/01/codewars-33-Salesman-s-Travel-6-kyu/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -978,7 +972,7 @@ the first letter is replaced by its character code (e.g. H becomes 72)</code></p
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">54</span>
+          <span class="site-state-item-count">55</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
