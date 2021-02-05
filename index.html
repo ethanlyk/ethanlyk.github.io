@@ -157,6 +157,97 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2021/02/03/codewars-44-Prize-Draw-6-kyu/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ethanlyk">
+      <meta itemprop="description" content="A place to keep progressing">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EthanLyk's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/03/codewars-44-Prize-Draw-6-kyu/" class="post-title-link" itemprop="url">codewars-44: Prize Draw (6 kyu)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2021-02-03 22:29:00" itemprop="dateCreated datePublished" datetime="2021-02-03T22:29:00+08:00">2021-02-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2021-02-05 21:26:13" itemprop="dateModified" datetime="2021-02-05T21:26:13+08:00">2021-02-05</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Q:<br>To participate in a prize draw each one gives his/her firstname.</p>
+<p>Each letter of a firstname has a value which is its rank in the English alphabet. A and a have rank 1, B and b rank 2 and so on.</p>
+<p>The length of the firstname is added to the sum of these ranks hence a number som.</p>
+<p>An array of random weights is linked to the firstnames and each som is multiplied by its corresponding weight to get what they call a winning number.<br>Example:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">names: &quot;COLIN,AMANDBA,AMANDAB,CAROL,PauL,JOSEPH&quot;</span><br><span class="line">weights: [1, 4, 4, 5, 2, 1]</span><br><span class="line"></span><br><span class="line">PauL -&gt; som &#x3D; length of firstname + 16 + 1 + 21 + 12 &#x3D; 4 + 50 -&gt; 54</span><br><span class="line">The *weight* associated with PauL is 2 so PauL&#39;s *winning number* is 54 * 2 &#x3D; 108.</span><br></pre></td></tr></table></figure>
+<p>Now one can sort the firstnames in decreasing order of the winning numbers. When two people have the same winning number sort them alphabetically by their firstnames.<br>Task:</p>
+<ul>
+<li>parameters: st a string of firstnames, we an array of weights, n a rank</li>
+<li>return: the firstname of the participant whose rank is n (ranks are numbered from 1)</li>
+</ul>
+<p>Example:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">names: &quot;COLIN,AMANDBA,AMANDAB,CAROL,PauL,JOSEPH&quot;</span><br><span class="line">weights: [1, 4, 4, 5, 2, 1]</span><br><span class="line">n: 4</span><br><span class="line"></span><br><span class="line">The function should return: &quot;PauL&quot;</span><br></pre></td></tr></table></figure>
+<p>Notes:</p>
+<ul>
+<li>The weight array is at least as long as the number of names, it may be longer.</li>
+<li>If st is empty return “No participants”.</li>
+<li>If n is greater than the number of participants then return “Not enough participants”.</li>
+<li>See Examples Test Cases for more examples.</li>
+</ul>
+<p>A:</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/02/03/codewars-44-Prize-Draw-6-kyu/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2021/01/31/codewars-43-Consecutive-strings-6-kyu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -831,78 +922,6 @@ the first letter is replaced by its character code (e.g. H becomes 72)</code></p
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://ethanlyk.github.io/2021/01/02/codewars-34-Function-iteration-6-kyu/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ethanlyk">
-      <meta itemprop="description" content="A place to keep progressing">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="EthanLyk's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/02/codewars-34-Function-iteration-6-kyu/" class="post-title-link" itemprop="url">codewars-34: Function iteration (6 kyu)</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-              
-
-              <time title="創建時間：2021-01-02 20:26:00 / 修改時間：20:27:30" itemprop="dateCreated datePublished" datetime="2021-01-02T20:26:00+08:00">2021-01-02</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Q:<br>The purpose of this kata is to write a higher-order function returning a new function that iterates on a specified function a given number of times. This new function takes in an argument as a seed to start the computation from.</p>
-<p>For instance, consider the function getDouble. When run twice on value 3, yields 12 as shown below.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">getDouble(3) &#x3D;&gt; 6</span><br><span class="line">getDouble(6) &#x3D;&gt; 12</span><br></pre></td></tr></table></figure>
-<p>Let us name the new function createIterator and we should be able to obtain the same result using createIterator as shown below:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var doubleIterator &#x3D; createIterator(getDouble, 2); &#x2F;&#x2F; This means, it runs *getDouble* twice</span><br><span class="line">doubleIterator(3) &#x3D;&gt; 12</span><br></pre></td></tr></table></figure>
-
-<p>A:</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/01/02/codewars-34-Function-iteration-6-kyu/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -972,7 +991,7 @@ the first letter is replaced by its character code (e.g. H becomes 72)</code></p
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">55</span>
+          <span class="site-state-item-count">56</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
